@@ -78,6 +78,25 @@ blockquote {
 	margin-top: 10px;
 }
 
+.work_date,
+.work_position,
+.work_website,
+.institution,
+.study_date,
+.degree {
+	margin-bottom: 10px;
+	float: left;
+	width: 30%;
+}
+
+.courses {
+	clear: both;
+}
+
+.dissertation {
+	margin-top: 10px;
+}
+
 
 #basics {
 	margin-bottom: 10px;
@@ -94,6 +113,23 @@ blockquote {
 	float: left;
 	width: 80px;
 }
+
+#work,
+#volunteer {
+	padding-bottom: 5px;
+	border-bottom: 1px #E2E2E2 solid;
+}
+
+#work .item,
+#volunteer .item {
+	margin: 25px 0;
+}
+
+#skills {
+	margin-bottom: 10px;
+	border-bottom: 1px #E2E2E2 solid;
+}
+
 #profiles,
 #skills {
 	overflow: hidden;
@@ -104,5 +140,9 @@ blockquote {
 #skills .item {
 	float: left;
 	width: 50%;
+}
+
+#references {
+	clear: both;
 }
 
