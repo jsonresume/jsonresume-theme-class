@@ -1,0 +1,14 @@
+{
+  "name": "jsonresume-theme-class",
+  "version": "0.0.1",
+  "description": "Class theme for JSON Resume",
+  "author": "Charlotte Spencer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erming/jsonresume-theme-boilerplate"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4"
+  }
+}
