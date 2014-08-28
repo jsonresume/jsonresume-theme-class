@@ -60,14 +60,15 @@
 					{{network}}
 				</strong>
 				{{/if}}
-				{{#if username}}
-				<div class="username">
-					{{username}}
-				</div>
-				{{/if}}
 				{{#if url}}
 				<div class="url">
-					<a href="{{url}}">Link</a>
+					<a href="{{url}}">
+					{{#if username}}
+						{{username}}
+					{{else}}
+						{{url}}
+					{{/if}}
+					</a>
 				</div>
 				{{/if}}
 			</div>
@@ -237,71 +238,6 @@
 			{{#if dissertation}}
 			<div class="dissertation">
 				<span>Dissertation: </span>{{dissertation}}
-			</div>
-			{{/if}}
-		</div>
-		{{/each}}
-	</section>
-	{{/if}}
-	
-	{{#if resume.awards.length}}
-	<section id="awards">
-		<h2>Awards</h2>
-		{{#each resume.awards}}
-		<div class="item">
-			{{#if title}}
-			<div class="title">
-				{{title}}
-			</div>
-			{{/if}}
-			{{#if date}}
-			<div class="date">
-				{{date}}
-			</div>
-			{{/if}}
-			{{#if awarder}}
-			<div class="awarder">
-				{{awarder}}
-			</div>
-			{{/if}}
-			{{#if summary}}
-			<div class="summary">
-				<p>{{summary}}</p>
-			</div>
-			{{/if}}
-		</div>
-		{{/each}}
-	</section>
-	{{/if}}
-	
-	{{#if resume.publications.length}}
-	<section id="publications">
-		<h2>Publications</h2>
-		{{#each resume.publications}}
-		<div class="item">
-			{{#if name}}
-			<div class="name">
-				{{name}}
-			</div>
-			{{/if}}
-			{{#if publisher}}
-			<div class="publisher">
-				{{publisher}}
-			</div>
-			{{/if}}
-			{{#if releaseDate}}
-			<div class="releaseDate">
-				{{releaseDate}}
-			</div>
-			{{/if}}
-			{{#if website}}
-			<div class="website">
-				<a href="{{website}}">Link</a>
-			</div>
-			{{/if}}
-			{{#if summary}}
-			<div class="summary">
-				<p>{{summary}}</p>
 			</div>
 			{{/if}}
 		</div>

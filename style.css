@@ -142,7 +142,8 @@ blockquote {
 	width: 50%;
 }
 
-#references {
+#references,
+#interests {
 	clear: both;
 }
 
