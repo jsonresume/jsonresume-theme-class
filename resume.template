@@ -24,10 +24,10 @@
 
 	<div id="content" class="container">
 	<section id="basics">
-	<h3>Contact</h3>
 		<div class="contact">
+		<h3>Contact</h3>
 		{{#if website}}
-		<div class="website move">
+		<div class="website">
 			<strong>Website</strong>
 			{{website}}
 		</div>
