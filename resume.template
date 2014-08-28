@@ -14,15 +14,20 @@
 	</head>
 	<body>
 	
-	<div id="resume">
-
 	{{#resume.basics}}
+	<header>
 	<h1>{{name}}</h1>
+	{{#if label}}
 	<h2>{{label}}</h2>
+	{{/if}}
+	</header>
+
+	<div id="content" class="container">
 	<section id="basics">
+	<h3>Contact</h3>
 		<div class="contact">
 		{{#if website}}
-		<div class="website">
+		<div class="website move">
 			<strong>Website</strong>
 			{{website}}
 		</div>
@@ -42,46 +47,11 @@
 		</div>
 		{{#if summary}}
 		<div class="summary">
+			<h3>About</h3>
 			<p>{{summary}}</p>
 		</div>
 		{{/if}}
-		{{#location}}
-		<h3>Location</h3>
-		<section id="location">
-			{{#if address}}
-			<div class="address">
-				<strong>Address</strong>
-				{{address}}
-			</div>
-			{{/if}}
-			{{#if postalCode}}
-			<div class="postalCode">
-				<strong>Postal code</strong>
-				{{postalCode}}
-			</div>
-			{{/if}}
-			{{#if city}}
-			<div class="city">
-				<strong>City</strong>
-				{{city}}
-			</div>
-			{{/if}}
-			{{#if countryCode}}
-			<div class="countryCode">
-				<strong>Country code</strong>
-				{{countryCode}}
-			</div>
-			{{/if}}
-			{{#if region}}
-			<div class="region">
-				<strong>Region</strong>
-				{{region}}
-			</div>
-			{{/if}}
-		</section>
-		{{/location}}
 		{{#if profiles.length}}
-		<h3>Profiles</h3>
 		<section id="profiles">
 			{{#each profiles}}
 			<div class="item">
@@ -369,7 +339,7 @@
 			</div>
 			{{/if}}
 			{{#if fluency}}
-			<div class="fluency">
+			<div class="level">
 				<em>{{fluency}}</em>
 			</div>
 			{{/if}}
@@ -421,6 +391,5 @@
 	{{/if}}
 	
 	</div>
-	
 	</body>
 </html>
