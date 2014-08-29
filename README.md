@@ -1,11 +1,9 @@
 # Class theme for JSONResume [![](https://badge.fury.io/js/jsonresume-theme-class.svg)](http://badge.fury.io/js/jsonresume-theme-class)
 
 
-## Theme?
-
 First, check out [JSON Resume](http://jsonresume.org/)
 
-This is a theme for Resume/CV you build with JSON Resume.
+This is a theme for Resume/CV you build with JSON Resume, which you can view in action [here](http://themes.jsonresume.org/theme/class)
 
 If you want to build your own check [here](https://github.com/jsonresume/jsonresume-theme-boilerplate).
 
