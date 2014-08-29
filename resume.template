@@ -198,9 +198,9 @@
 		{{#each resume.education}}
 		<div class="item">
 			
-			{{#if qualification}}
-			<div class="qualification">
-				{{qualification}}
+			{{#if institution}}
+			<div class="institution">
+				{{institution}}
 			</div>
 			{{/if}}
 
@@ -221,9 +221,9 @@
 				{{/if}}
 			</div>
 
-			{{#if institution}}
-			<div class="institution">
-				{{institution}}
+			{{#if qualification}}
+			<div class="qualification">
+				{{qualification}}
 			</div>
 			{{/if}}
 
