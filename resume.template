@@ -31,6 +31,11 @@
 			<strong>Website</strong>
 			<a href="{{url}}">{{url}}</a>
 		</div>
+		{{else if website}}
+		<div class="website">
+			<strong>Website</strong>
+			<a href="{{website}}">{{website}}</a>
+		</div>
 		{{/if}}
 		{{#if email}}
 		<div class="email">
@@ -87,6 +92,10 @@
 			<h3 class="work_name">
 				{{name}}
 			</h3>
+			{{else if company}}
+			<h3 class="work_name">
+				{{company}}
+			</h3>
 			{{/if}}
 
 			{{#if position}}
@@ -115,6 +124,10 @@
 			{{#if url}}
 			<div class="work_website">
 				<a href="{{url}}">{{url}}</a>
+			</div>
+			{{else if website}}
+			<div class="work_website">
+				<a href="{{website}}">{{website}}</a>
 			</div>
 			{{/if}}
 
@@ -172,6 +185,10 @@
 			{{#if url}}
 			<div class="work_website">
 				<a href="{{url}}">{{url}}</a>
+			</div>
+			{{else if website}}
+			<div class="work_website">
+				<a href="{{website}}">{{website}}</a>
 			</div>
 			{{/if}}
 
