@@ -1,19 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
+
 	<title>{{#resume.basics}}{{name}} - CV{{/resume.basics}}</title>
 
 	<style>
 	{{{css}}}
 	</style>
-	
+
 	</head>
 	<body>
-	
+
 	{{#resume.basics}}
 	<header>
 	<h1>{{name}}</h1>
@@ -26,22 +26,22 @@
 	<section id="basics">
 		<div class="contact">
 		<h3>Contact</h3>
-		{{#if website}}
+		{{#if url}}
 		<div class="website">
 			<strong>Website</strong>
-			{{website}}
+			<a href="{{url}}">{{url}}</a>
 		</div>
 		{{/if}}
 		{{#if email}}
 		<div class="email">
 			<strong>Email</strong>
-			{{email}}
+			<a href="mailto:{{email}}">{{email}}</a>
 		</div>
 		{{/if}}
 		{{#if phone}}
 		<div class="phone">
 			<strong>Phone</strong>
-			{{phone}}
+			<a href="tel:{{phone}}">{{phone}}</a>
 		</div>
 		{{/if}}
 		</div>
@@ -83,12 +83,12 @@
 		<h2>Work</h2>
 		{{#each resume.work}}
 		<div class="item">
-			{{#if company}}
+			{{#if name}}
 			<h3 class="work_name">
-				{{company}}
+				{{name}}
 			</h3>
 			{{/if}}
-			
+
 			{{#if position}}
 			<div class="work_position">
 				{{position}}
@@ -112,12 +112,11 @@
 				{{/if}}
 			</div>
 
-			{{#if website}}
+			{{#if url}}
 			<div class="work_website">
-				<a href="{{website}}">{{website}}</a>
+				<a href="{{url}}">{{url}}</a>
 			</div>
 			{{/if}}
-
 
 			{{#if summary}}
 			<div class="summary">
@@ -146,13 +145,12 @@
 				{{organization}}
 			</h3>
 			{{/if}}
-			
+
 			{{#if position}}
 			<div class="work_position">
 				{{position}}
 			</div>
 			{{/if}}
-			{{#if website}}
 
 			<div class="work_date">
 				{{#if startDate}}
@@ -171,10 +169,12 @@
 				{{/if}}
 			</div>
 
+			{{#if url}}
 			<div class="work_website">
-				<a href="{{website}}">{{website}}</a>
+				<a href="{{url}}">{{url}}</a>
 			</div>
 			{{/if}}
+
 			{{#if summary}}
 			<div class="summary">
 				<p>{{summary}}</p>
@@ -191,13 +191,13 @@
 		{{/each}}
 	</section>
 	{{/if}}
-	
+
 	{{#if resume.education.length}}
 	<section id="education">
 		<h2>Education</h2>
 		{{#each resume.education}}
 		<div class="item">
-			
+
 			{{#if institution}}
 			<div class="institution">
 				{{institution}}
@@ -220,6 +220,12 @@
 				</span>
 				{{/if}}
 			</div>
+
+			{{#if url}}
+			<div class="work_website">
+				<a href="{{url}}">{{url}}</a>
+			</div>
+			{{/if}}
 
 			{{#if qualification}}
 			<div class="qualification">
@@ -244,7 +250,7 @@
 		{{/each}}
 	</section>
 	{{/if}}
-	
+
 	{{#if resume.skills.length}}
 	<section id="skills">
 		<h2>Skills</h2>
@@ -313,7 +319,7 @@
 		{{/each}}
 	</section>
 	{{/if}}
-	
+
 	{{#if resume.references.length}}
 	<section id="references">
 		<h2>References</h2>
@@ -333,7 +339,7 @@
 		{{/each}}
 	</section>
 	{{/if}}
-	
+
 	</div>
 	</body>
 </html>
