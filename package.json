@@ -8,7 +8,14 @@
     "url": "https://github.com/Charlotteis/jsonresume-theme-class"
   },
   "license": "MIT",
+  "scripts": {
+    "build:pdf": "resume export --theme . resume.pdf",
+    "build:html": "resume export --theme . resume.html"
+  },
   "dependencies": {
-    "handlebars": "^2.0.0-alpha.4"
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "resume-cli": "^3.0.5"
   }
 }
