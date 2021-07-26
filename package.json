@@ -2,10 +2,10 @@
   "name": "jsonresume-theme-class",
   "version": "0.1.2",
   "description": "Class theme for JSONResume.org",
-  "author": "Charlotte Spencer",
+  "author": "James Spencer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Charlotteis/jsonresume-theme-class"
+    "url": "https://github.com/varjmes/jsonresume-theme-class"
   },
   "license": "MIT",
   "scripts": {
