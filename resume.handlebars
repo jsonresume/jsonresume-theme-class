@@ -5,7 +5,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 
-	<title>{{#resume.basics}}{{name}} - CV{{/resume.basics}}</title>
+	{{#resume.basics}}
+	<title>{{name}} - CV</title>
+	<meta name="description" name="{{summary}}"/>
+
+	<meta property="og:site_name" content="{{name}}"/>
+	<meta property="og:title" content="{{label}}"/>
+	<meta property="og:description" content="{{summary}}"/>
+	<meta property="og:type" content="website"/>
+
+	<meta name="twitter:card" content="summary"/>
+	{{/resume.basics}}
 
 	<style>
 	{{{css}}}
