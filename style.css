@@ -17,15 +17,15 @@ p {
 }
 
 a {
-	color: #31A6D6;
+	color: #3061A5;
 }
 
 a:visited {
-	color: #3061A5;
+	color: #1866C3;
 }
 
 a:hover {
-	color: #3061A5;
+	color: #1866C3;
 }
 
 ul {
@@ -45,7 +45,7 @@ blockquote {
 /* Header name styling */
 
 header {
-	background: #68B6E3;
+	background: #1866C3;
 	padding: 50px;
 	margin-bottom: 50px;
 }
