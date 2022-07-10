@@ -40,6 +40,10 @@ blockquote {
 	margin-bottom: 1em;
 }
 
+.item {
+	break-inside: avoid;
+}
+
 /* End general, overall styling */
 
 /* Header name styling */
