@@ -74,17 +74,21 @@
           {{network}}
         </strong>
         {{/if}}
-        {{#if url}}
-        <div class="url">
+        <div>
+          {{#if url}}
           <a href="{{url}}">
-          {{#if username}}
-            {{username}}
-          {{else}}
-            {{url}}
-          {{/if}}
+            {{#if username}}
+              {{username}}
+            {{else}}
+              {{url}}
+            {{/if}}
           </a>
+          {{else}}
+          <span>
+            {{username}}
+          </span>
+          {{/if}}
         </div>
-        {{/if}}
       </div>
       {{/each}}
     </section>
