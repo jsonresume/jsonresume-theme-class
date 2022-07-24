@@ -8,11 +8,11 @@ const { marked } = require("marked");
  * @type {string[]}
  */
 const markdownProperties = [
-	"work.summary",
-	"work.highlights",
-	"volunteer.summary",
-	"volunteer.highlights",
-	"publications.summary"
+  "work.summary",
+  "work.highlights",
+  "volunteer.summary",
+  "volunteer.highlights",
+  "publications.summary"
 ]
 
 /**
@@ -22,27 +22,27 @@ const markdownProperties = [
  * @type {object}
  */
 const renderer = {
-	heading(text) {
-		return text;
-	},
-	html(html) {
-		return html;
-	},
-	hr() {
-		return '';
-	},
-	list(body) {
-		return body;
-	},
-	listitem(text) {
-		return text;
-	},
-	br() {
-		return '';
-	},
-	paragraph(text) {
-		return text;
-	}
+  heading(text) {
+    return text;
+  },
+  html(html) {
+    return html;
+  },
+  hr() {
+    return '';
+  },
+  list(body) {
+    return body;
+  },
+  listitem(text) {
+    return text;
+  },
+  br() {
+    return '';
+  },
+  paragraph(text) {
+    return text;
+  }
 }
 
 /**
@@ -50,53 +50,54 @@ const renderer = {
  * @returns {string} Input parsed to HTML.
  */
 function parseMarkdown(body) {
-	return marked.parse(body);
+  return marked.parse(body);
 }
 
 /**
- * Recursively perform a callback on all string properties of an object.
- * Uses {@link markdownProperties} to limit which properties of the object are processed.
+ * Recursively perform a callback on all string properties of an object in the
+ * list of JSON paths.
  *
  * @param {object} object Object to traverse.
+ * @param {string[]} jsonpaths Limit which JSON paths to execute the callback for.
  * @param {function} callback
  * @param {string|undefined} currentKey The current object key that's being processed.
  */
-function traverseString(object, callback, currentKey) {
-	const type = typeof object;
+function traverseString(object, jsonpaths, callback, currentKey) {
+  const type = typeof object;
 
-	if (type === 'string') {
-		if (markdownProperties.includes(currentKey))
-			return callback(object);
-	}
+  if (type === 'string') {
+    if (jsonpaths.includes(currentKey))
+      return callback(object);
+  }
 
-	if (Array.isArray(object)) {
-		object = object.map((item) => traverseString(item, callback, currentKey));
-	}
+  if (Array.isArray(object)) {
+    object = object.map((item) => traverseString(item, jsonpaths, callback, currentKey));
+  }
 
-	else if (type === 'object') {
-		for (const key in object) {
-			const nextKey = (currentKey) ? `${currentKey}.${key}` : key;
-			object[key] = traverseString(object[key], callback, nextKey);
-		}
-	}
+  else if (type === 'object') {
+    for (const key in object) {
+      const nextKey = (currentKey) ? `${currentKey}.${key}` : key;
+      object[key] = traverseString(object[key], jsonpaths, callback, nextKey);
+    }
+  }
 
-	return object
+  return object
 }
 
 function render(resume) {
-	const css = fs.readFileSync(__dirname + "/style.css", "utf-8");
-	const template = fs.readFileSync(__dirname + "/resume.handlebars", "utf-8");
+  const css = fs.readFileSync(__dirname + "/style.css", "utf-8");
+  const template = fs.readFileSync(__dirname + "/resume.handlebars", "utf-8");
 
-	const markedResume = traverseString(resume, parseMarkdown);
+  const markedResume = traverseString(resume, markdownProperties, parseMarkdown);
 
-	return Handlebars.compile(template)({
-		css: css,
-		resume: markedResume
-	});
+  return Handlebars.compile(template)({
+    css: css,
+    resume: markedResume
+  });
 }
 
 marked.use({ renderer });
 
 module.exports = {
-	render: render
+  render: render
 };
