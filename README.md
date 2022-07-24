@@ -7,7 +7,7 @@
 
 
 A modern theme for [JSON Resume](http://jsonresume.org/) which is self-contained. The content of the resume will work offline and can be hosted without depending on
-or making requested to third-party servers.
+or making requests to third-party servers.
 
 ## Features
 
