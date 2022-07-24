@@ -1,17 +1,19 @@
-# Class theme for JSONResume [![](https://badge.fury.io/js/jsonresume-theme-class.svg)](http://badge.fury.io/js/jsonresume-theme-class)
+# Class Theme for JSON Resume
 
+[![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jsonresume/public)
+[![matrix](https://img.shields.io/badge/matrix-join%20chat-%230dbd8b)](https://matrix.to/#/#json-resume:one.ems.host)
+[![build status](https://img.shields.io/github/workflow/status/jsonresume/resume-cli/Main)](https://github.com/jsonresume/resume-cli/actions)
+[![npm package](https://img.shields.io/npm/v/@jsonresume/jsonresume-theme-class)](https://www.npmjs.org/package/resume-cli)
 
-First, check out [JSON Resume](http://jsonresume.org/)
+A modern theme for [JSON Resume](http://jsonresume.org/) which is self-contained. The content of the resume will work offline and can be hosted without depending on
+or making requested to third-party servers.
 
-This is a theme for Resume/CV you build with JSON Resume, which you can view in action [here](http://themes.jsonresume.org/theme/class)
+## Features
 
-If you want to build your own check [here](https://github.com/jsonresume/jsonresume-theme-boilerplate).
+### JSON Resume 1.0.0
 
-## Notes
-_It is not called class due to it being particularly classy, but rather they are my initials_
+This supports the JSON Resume 1.0.0 spec, and is backward compatible with earlier versions.
 
-You can find the node package for this theme [here](https://www.npmjs.org/package/jsonresume-theme-class).
+### Open Graph Protocol
 
-## License
-
-Available under [the MIT license](http://mths.be/mit).
+Populates the `head` of the HTML document with [Open Graph](https://ogp.me/) tags. This allows social media platforms and instant messengers to create embeds when your resume is shared.
