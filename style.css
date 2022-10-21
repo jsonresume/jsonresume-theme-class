@@ -1,8 +1,33 @@
-/*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+/*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
 
-/* General, overall styling */
+/* Variables */
+
 body {
-  background: #F9F9F9;
+  --fg-color: black;
+  --bg-color: #F9F9F9;
+  --header-h1-fg-color: #FFFFFF;
+  --header-h2-fg-color: #F3F3F3;
+  --header-bg-color: #1866C3;
+  --link-color: #3061A5;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --fg-color: #D5D6D7;
+    --bg-color: #2C2C2C;
+    --header-h1-fg-color: #CFD0D1;
+    --header-h2-fg-color: #D5D6D7;
+    --header-bg-color: #1B1B1B;
+    --link-color: #70A1E5;
+  }
+}
+
+/* Page CSS */
+
+body {
+  color: var(--fg-color);
+  background: var(--bg-color);
   font-size: 0.9em;
   font-family: 'Helvetica', 'Arial', 'Trebuchet MS', 'Verdana', sans-serif;
   margin-bottom: 100px;
@@ -17,7 +42,7 @@ p {
 }
 
 a {
-  color: #3061A5;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -37,45 +62,33 @@ blockquote {
   break-inside: avoid;
 }
 
-/* End general, overall styling */
-
-/* Header name styling */
-
 header {
-  background: #1866C3;
+  background: var(--header-bg-color);
   padding: 50px;
   margin-bottom: 50px;
 }
 
 header h1 {
-  color: #FFFFFF;
+  color: var(--header-h1-fg-color);
   max-width: 700px;
   margin: 0 auto;
 }
 
 header h2 {
-  color: #F3F3F3;
+  color: var(--header-h2-fg-color);
   font-size: 1em;
   max-width: 700px;
   margin: 0 auto;
 }
 
-/* End header name styling */
-
-/* Set width of main body of CV */
 .container {
   max-width: 700px;
   padding: 0 50px;
   margin: 0 auto;
 }
 
-/* End */
-
-/* Styling Basics (Name, Contact, About, Profiles) */
-
 #basics {
   margin-bottom: 10px;
-  border-top: 1px #E2E2E2 solid;
   border-bottom: 1px #E2E2E2 solid;
 }
 #basics h3 {
@@ -118,10 +131,6 @@ header h2 {
   margin-top: 10px;
 }
 
-/* End 'Basics' Styling */
-
-/* Work and volunteering experience styling */
-
 .work_date,
 .work_position,
 .work_website,
@@ -151,10 +160,6 @@ header h2 {
 #volunteer .item {
   margin: 25px 0;
 }
-
-/* End work and volunteering */
-
-/* Skills, languages, interests and references styling */
 
 #skills {
   margin-bottom: 10px;
@@ -186,5 +191,3 @@ header h2 {
 #interests {
   clear: both;
 }
-
-/* End styling */
