@@ -2,7 +2,9 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
 
   {{#resume.basics}}
   <title>{{name}} - CV</title>
@@ -11,10 +13,19 @@
   <meta property="og:site_name" content="{{name}}">
   <meta property="og:title" content="{{label}}">
   <meta property="og:description" content="{{summary}}">
-  <meta property="og:type" content="website">
 
-  <meta name="twitter:card" content="summary">
+  {{#if image}}
+  <link rel="icon" href="{{image}}">
+  <meta property="og:image" content="{{image}}">
+  <meta property="og:image:alt" content="Avatar of {{name}}.">
+  {{/if}}
   {{/resume.basics}}
+
+  {{#resume.custom}}
+  {{#if twitterHandle}}
+  <meta name="twitter:site" content="{{twitterHandle}}">
+  {{/if}}
+  {{/resume.custom}}
 
   <style>
   {{{css}}}
@@ -371,5 +382,9 @@
   {{/if}}
 
   </div>
+
+  <script>
+    console.log('Theme made with 💕 using JSON Resume and Handlebars!\nhttps://github.com/jsonresume/jsonresume-theme-class')
+  </script>
   </body>
 </html>

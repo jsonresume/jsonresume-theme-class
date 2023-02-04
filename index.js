@@ -89,6 +89,33 @@ function render(resume) {
   const template = fs.readFileSync(__dirname + "/resume.handlebars", "utf-8");
 
   const markedResume = traverseString(resume, markdownProperties, parseMarkdown);
+  const { profiles } = markedResume.basics;
+
+  if (Array.isArray(profiles)) {
+    const twitter = profiles.find((profile) => {
+      return profile.network.toLowerCase().includes('twitter');
+    });
+
+    if (twitter) {
+      let { username, url } = twitter;
+
+      if (!username && url) {
+        const match = url.match(/https?:\/\/.+?\/([\w]{1,15})/);
+
+        if (match.length == 2) {
+          username = match[1];
+        }
+      }
+
+      if (username && !username.startsWith('@')) {
+        username = `@${username}`;
+      }
+
+      markedResume.custom = {
+        twitterHandle: username
+      }
+    }
+  }
 
   return Handlebars.compile(template)({
     css: css,
