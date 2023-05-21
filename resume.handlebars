@@ -73,7 +73,7 @@
     {{#if summary}}
     <div class="summary">
       <h3>About</h3>
-      <p>{{{summary}}}</p>
+      <p>{{{markdown summary}}}</p>
     </div>
     {{/if}}
     {{#if profiles.length}}
@@ -131,17 +131,11 @@
       <div class="work_date">
         {{#if startDate}}
         <span class="startDate">
-          {{startDate}}
+          {{{date startDate}}}
         </span>
-        {{#if endDate}}
         <span class="endDate">
-          - {{endDate}}
+          - {{{date endDate}}}
         </span>
-        {{else}}
-        <span class="endDate">
-          - Present
-        </span>
-        {{/if}}
         {{/if}}
       </div>
 
@@ -157,13 +151,13 @@
 
       {{#if summary}}
       <div class="summary">
-        <p>{{{summary}}}</p>
+        <p>{{{markdown summary}}}</p>
       </div>
       {{/if}}
       {{#if highlights.length}}
       <ul class="highlights">
         {{#each highlights}}
-        <li>{{{.}}}</li>
+        <li>{{{markdown .}}}</li>
         {{/each}}
       </ul>
       {{/if}}
@@ -192,17 +186,11 @@
       <div class="work_date">
         {{#if startDate}}
         <span class="startDate">
-          {{startDate}}
+          {{{date startDate}}}
         </span>
-        {{#if endDate}}
         <span class="endDate">
-          - {{endDate}}
+          - {{{date endDate}}}
         </span>
-        {{else}}
-        <span class="endDate">
-          - Present
-        </span>
-        {{/if}}
         {{/if}}
       </div>
 
@@ -218,13 +206,13 @@
 
       {{#if summary}}
       <div class="summary">
-        <p>{{{summary}}}</p>
+        <p>{{{markdown summary}}}</p>
       </div>
       {{/if}}
       {{#if highlights.length}}
       <ul class="highlights">
         {{#each highlights}}
-        <li>{{{.}}}</li>
+        <li>{{{markdown .}}}</li>
         {{/each}}
       </ul>
       {{/if}}
@@ -248,17 +236,11 @@
       <div class="study_date">
         {{#if startDate}}
         <span class="startDate">
-          {{startDate}}
+          {{{date startDate}}}
         </span>
-        {{#if endDate}}
         <span class="endDate">
-          - {{endDate}}
+          - {{{date endDate}}}
         </span>
-        {{else}}
-        <span class="endDate">
-          - Present
-        </span>
-        {{/if}}
         {{/if}}
       </div>
 
