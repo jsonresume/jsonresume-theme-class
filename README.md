@@ -1,6 +1,5 @@
 # Class Theme for JSON Resume
 
-[![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jsonresume/public)
 [![matrix](https://img.shields.io/badge/matrix-join%20chat-%230dbd8b)](https://matrix.to/#/#json-resume:one.ems.host)
 [![npm package](https://img.shields.io/npm/v/@jsonresume/jsonresume-theme-class)](https://www.npmjs.com/package/@jsonresume/jsonresume-theme-class)
 
