@@ -46,6 +46,7 @@
   <section id="basics">
     <div class="contact">
     <h3>Contact</h3>
+    <div class="split">
     {{#if url}}
     <div class="website">
       <strong>Website</strong>
@@ -70,6 +71,7 @@
     </div>
     {{/if}}
     </div>
+    </div>
     {{#if summary}}
     <div class="summary">
       <h3>About</h3>
@@ -77,7 +79,7 @@
     </div>
     {{/if}}
     {{#if profiles.length}}
-    <section id="profiles">
+    <section id="profiles" class="split">
       {{#each profiles}}
       <div class="item">
         {{#if network}}
@@ -122,6 +124,7 @@
       </h3>
       {{/if}}
 
+      <div class="split">
       {{#if position}}
       <div class="work_position">
         {{position}}
@@ -148,6 +151,7 @@
         <a href="{{website}}">{{website}}</a>
       </div>
       {{/if}}
+      </div>
 
       {{#if summary}}
       <div class="summary">
@@ -177,6 +181,7 @@
       </h3>
       {{/if}}
 
+      <div class="split">
       {{#if position}}
       <div class="work_position">
         {{position}}
@@ -203,6 +208,7 @@
         <a href="{{website}}">{{website}}</a>
       </div>
       {{/if}}
+      </div>
 
       {{#if summary}}
       <div class="summary">
@@ -227,6 +233,7 @@
     {{#each resume.education}}
     <div class="item">
 
+      <div class="split">
       {{#if institution}}
       <div class="institution">
         {{institution}}
@@ -249,6 +256,7 @@
         <a href="{{url}}">{{url}}</a>
       </div>
       {{/if}}
+      </div>
 
       {{#if qualification}}
       <div class="qualification">
