@@ -13,11 +13,7 @@ This supports the JSON Resume 1.0.0 spec, and is backward compatible with earlie
 
 ### Application Tracking System (ATS) Friendly
 
-Many companies and recruiters use [ATS](https://en.wikipedia.org/wiki/Applicant_tracking_system) systems that parse CV's and extract the information into a standard format. Part of maintaining this theme includes reviewing this and adhering to standard practices when building the résumé.
-
-> Resume parsers have become so omnipresent that rather than writing to a recruiter, candidates should focus on writing to the parsing system.
-> 
-> — [Wikipedia: Résumé parsing](https://en.wikipedia.org/wiki/R%C3%A9sum%C3%A9_parsing#Resume_optimization)
+Many companies and recruiters use [ATS](https://en.wikipedia.org/wiki/Applicant_tracking_system) systems that [parse CV's](https://en.wikipedia.org/wiki/R%C3%A9sum%C3%A9_parsing) and extract the information into a standard format. Part of maintaining this theme includes reviewing this and adhering to standard practices when building the résumé.
 
 ### Markdown
 
