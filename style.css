@@ -10,6 +10,7 @@ body {
   --header-h2-fg-color: #F3F3F3;
   --header-bg-color: #1866C3;
   --link-color: #3061A5;
+  --seperator-color: #E2E2E2
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +21,7 @@ body {
     --header-h2-fg-color: #D5D6D7;
     --header-bg-color: #1B1B1B;
     --link-color: #70A1E5;
+    --seperator-color: #939393
   }
 }
 
@@ -70,26 +72,26 @@ header {
 
 header h1 {
   color: var(--header-h1-fg-color);
-  max-width: 700px;
+  max-width: 772px;
   margin: 0 auto;
 }
 
 header h2 {
   color: var(--header-h2-fg-color);
   font-size: 1em;
-  max-width: 700px;
+  max-width: 772px;
   margin: 0 auto;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 772px;
   padding: 0 50px;
   margin: 0 auto;
 }
 
 #basics {
   margin-bottom: 10px;
-  border-bottom: 1px #E2E2E2 solid;
+  border-bottom: 1px var(--seperator-color) solid;
 }
 #basics h3 {
   margin-bottom: 10px;
@@ -148,7 +150,7 @@ header h2 {
 #work,
 #volunteer {
   padding-bottom: 5px;
-  border-bottom: 1px #E2E2E2 solid;
+  border-bottom: 1px var(--seperator-color) solid;
 }
 
 #work .item,
@@ -158,7 +160,7 @@ header h2 {
 
 #skills {
   margin-bottom: 10px;
-  border-bottom: 1px #E2E2E2 solid;
+  border-bottom: 1px var(--seperator-color) solid;
   padding-bottom: 5px;
 }
 
