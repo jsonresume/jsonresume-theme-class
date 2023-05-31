@@ -32,7 +32,6 @@ body {
   background: var(--bg-color);
   font-size: 0.9em;
   font-family: 'Helvetica', 'Arial', 'Trebuchet MS', 'Verdana', sans-serif;
-  margin-bottom: 100px;
 }
 
 em {
