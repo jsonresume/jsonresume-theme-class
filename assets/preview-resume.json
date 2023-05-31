@@ -1,0 +1,70 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Seth Falco",
+    "label": "Senior Full-Stack Engineer",
+    "image": "file://./assets/seth-avatar-cyan-by-vukory.png",
+    "email": "seth@example.org",
+    "phone": "+44 7694201337",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla facilisi nullam.",
+    "location": {
+      "countryCode": "GB"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "SethFalco",
+        "url": "https://github.com/SethFalco"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "sethfalco",
+        "url": "https://www.linkedin.com/in/sethfalco/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Totally Best Company",
+      "location": "Spain",
+      "position": "Senior Full-Stack Engineer",
+      "url": "https://example.org/",
+      "startDate": "2021-10",
+      "summary": "Facilisis volutpat est velit egestas dui id ornare.",
+      "highlights": [
+        "Sollicitudin nibh sit amet commodo nulla facilisi nullam.",
+        "A scelerisque purus semper eget.",
+        "Sed egestas egestas fringilla phasellus faucibus scelerisque.",
+        "Purus semper eget duis at tellus at urna condimentum mattis."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Totallly Best Charity",
+      "position": "Maintainer",
+      "url": "https://www.example.com/",
+      "startDate": "2021-05",
+      "summary": "Cursus risus at ultrices mi tempus imperdiet nulla.",
+      "highlights": [
+        "Sed odio morbi quis commodo odio aenean sed adipiscing.",
+        "Diam sollicitudin tempor id eu nisl nunc mi."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Totally Best School",
+      "url": "https://www.example.org/",
+      "area": "Information Technology",
+      "studyType": "Community-Study"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Totally Best Certificate",
+      "date": "2023-04-17",
+      "issuer": "edX"
+    }
+  ]
+}
