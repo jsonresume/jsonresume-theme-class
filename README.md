@@ -5,6 +5,22 @@
 
 A modern theme for [JSON Resume](http://jsonresume.org/) which is self-contained. The content of the résumé will work offline and can be hosted without depending on or making requests to third-party servers.
 
+## Usage
+
+```sh
+# Install resume-cli via npm, yarn, pnpm, or whaever package manager you want
+npm install --global resume-cli
+
+# Install @jsonresume/jsonresume-theme-class in the directory resume.json is in
+npm install @jsonresume/jsonresume-theme-class
+
+# Export as an HTML page, ready to be served by any web server
+resume export --theme @jsonresume/jsonresume-theme-class index.html
+
+# Export a PDF document, it's recommended to use your name as the file name
+resume export --theme @jsonresume/jsonresume-theme-class your-name.pdf
+```
+
 ## Features
 
 ### JSON Resume 1.0.0
