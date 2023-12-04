@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-{{#if resume.languages.0.language}}
-<html lang="{{resume.languages.0.language}}">
+{{#if resume.meta.language}}
+<html lang="{{resume.meta.language}}">
 {{else}}
 <html>
 {{/if}}
   <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
+    {{#if resume.basics.name}}
+    <title>{{resume.basics.name}} - CV</title>
+    <meta property="og:site_name" content="{{resume.basics.name}}">
+    {{else}}
+    <title>CV</title>
+    {{/if}}
 
-  {{#resume.basics}}
-  <title>{{name}} - CV</title>
-  <meta name="description" content="{{summary}}">
+    {{#if resume.basics.summary}}
+    <meta name="description" content="{{resume.basics.summary}}">
+    <meta property="og:description" content="{{resume.basics.summary}}">
+    {{/if}}
 
-  <meta property="og:site_name" content="{{name}}">
-  <meta property="og:title" content="{{label}}">
-  <meta property="og:description" content="{{summary}}">
+    {{#if resume.basics.label}}
+    <meta property="og:title" content="{{resume.basics.label}}">
+    {{/if}}
 
-  {{#if image}}
-  <link rel="icon" href="{{image}}">
-  <meta property="og:image" content="{{image}}">
-  <meta property="og:image:alt" content="Avatar of {{name}}.">
-  {{/if}}
-  {{/resume.basics}}
+    {{#if resume.basics.image}}
+    <meta property="og:image" content="{{resume.basics.image}}">
+    <link rel="icon" href="{{resume.basics.image}}">
+    {{#if resume.basics.name}}
+    <meta property="og:image:alt" content="Avatar of {{resume.basics.name}}.">
+    {{/if}}
+    {{/if}}
 
-  {{#resume.custom}}
-  {{#if xTwitterHandle}}
-  <meta name="twitter:site" content="{{xTwitterHandle}}">
-  {{/if}}
-  {{/resume.custom}}
+    {{#if resume.custom.xTwitterHandle}}
+    <meta name="twitter:site" content="{{resume.custom.xTwitterHandle}}">
+    {{/if}}
 
-  <style>
-  {{{css}}}
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
 
+    <style>{{{css}}}</style>
   </head>
   <body>
 
@@ -313,9 +317,7 @@
     {{#each resume.languages}}
     <div class="item">
       {{#if language}}
-      <div>
-        {{lang language}}
-      </div>
+      <div>{{language}}</div>
       {{/if}}
       {{#if fluency}}
       <div class="level">

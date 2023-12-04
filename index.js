@@ -111,19 +111,6 @@ function render(resume) {
     }
   }
 
-  const primaryLanguage = resume.languages && resume.languages[0].language;
-
-  if (primaryLanguage) {
-    Handlebars.registerHelper("lang", (body) => {
-      const languageNames = new Intl.DisplayNames([primaryLanguage], {
-        type: 'language',
-
-      });
-
-      return languageNames.of(body);
-    });
-  }
-
   const html = Handlebars.compile(template)({
     css,
     resume

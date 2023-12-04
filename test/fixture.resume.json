@@ -1,5 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "language": "en"
+  },
   "basics": {
     "name": "Seth Falco",
     "label": "Open-Sourcerer 🧙‍♂️",
@@ -76,11 +79,11 @@
   ],
   "languages": [
     {
-      "language": "en",
+      "language": "English",
       "fluency": "Native"
     },
     {
-      "language": "fr",
+      "language": "French",
       "fluency": "Elementary"
     }
   ]
