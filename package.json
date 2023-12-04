@@ -18,11 +18,13 @@
     "url": "https://github.com/jsonresume/jsonresume-theme-class"
   },
   "scripts": {
-    "build:pdf": "resume export --theme . resume.pdf",
-    "build:html": "resume export --theme . resume.html"
+    "serve": "resume serve --theme .  --resume ./test/fixture.resume.json",
+    "build:pdf": "resume export --theme . --resume ./test/fixture.resume.json resume.pdf",
+    "build:html": "resume export --theme . --resume ./test/fixture.resume.json resume.html"
   },
   "dependencies": {
     "handlebars": "^4.7.7",
+    "html-minifier": "^4.0.0",
     "marked": "^4.0.17"
   },
   "devDependencies": {

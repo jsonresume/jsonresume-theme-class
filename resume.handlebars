@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+{{#if resume.languages.0.language}}
+<html lang="{{resume.languages.0.language}}">
+{{else}}
 <html>
+{{/if}}
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,8 +26,8 @@
   {{/resume.basics}}
 
   {{#resume.custom}}
-  {{#if twitterHandle}}
-  <meta name="twitter:site" content="{{twitterHandle}}">
+  {{#if xTwitterHandle}}
+  <meta name="twitter:site" content="{{xTwitterHandle}}">
   {{/if}}
   {{/resume.custom}}
 
@@ -50,7 +54,8 @@
     {{#if url}}
     <div class="website">
       <strong>Website</strong>
-      <a href="{{url}}">{{url}}</a>
+
+      {{{link url}}}
     </div>
     {{else if website}}
     <div class="website">
@@ -87,7 +92,7 @@
           {{network}}
         </strong>
         {{/if}}
-        <div>
+        <div class="username">
           {{#if url}}
           <a href="{{url}}">
             {{#if username}}
@@ -97,9 +102,7 @@
             {{/if}}
           </a>
           {{else}}
-          <span>
-            {{username}}
-          </span>
+          {{username}}
           {{/if}}
         </div>
       </div>
@@ -133,18 +136,13 @@
 
       <div class="work_date">
         {{#if startDate}}
-        <span class="startDate">
-          {{{date startDate}}}
-        </span>
-        <span class="endDate">
-          - {{{date endDate}}}
-        </span>
+        {{{date startDate}}} - {{{date endDate}}}
         {{/if}}
       </div>
 
       {{#if url}}
       <div class="work_website">
-        <a href="{{url}}">{{url}}</a>
+        {{{link url}}}
       </div>
       {{else if website}}
       <div class="work_website">
@@ -201,7 +199,7 @@
 
       {{#if url}}
       <div class="work_website">
-        <a href="{{url}}">{{url}}</a>
+        {{{link url}}}
       </div>
       {{else if website}}
       <div class="work_website">
@@ -253,7 +251,7 @@
 
       {{#if url}}
       <div class="work_website">
-        <a href="{{url}}">{{url}}</a>
+        {{{link url}}}
       </div>
       {{/if}}
       </div>
@@ -315,8 +313,8 @@
     {{#each resume.languages}}
     <div class="item">
       {{#if language}}
-      <div class="language">
-        {{language}}
+      <div>
+        {{lang language}}
       </div>
       {{/if}}
       {{#if fluency}}
@@ -370,11 +368,6 @@
     {{/each}}
   </section>
   {{/if}}
-
   </div>
-
-  <script>
-    console.log('Theme made with 💕 using JSON Resume and Handlebars!\nhttps://github.com/jsonresume/jsonresume-theme-class')
-  </script>
   </body>
 </html>
