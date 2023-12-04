@@ -1,0 +1,21 @@
+name: Test Run
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npx resume export --theme . --resume ./test/fixture.resume.json /tmp/resume.html
+      - run: npx resume export --theme . --resume ./test/fixture.resume.json /tmp/resume.pdf
