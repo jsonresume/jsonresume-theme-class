@@ -23,8 +23,7 @@ resume export --theme @jsonresume/jsonresume-theme-class your-name.pdf
 
 ### Notes
 
-* This theme expects languages in your résumé to be defined with language codes (i.e. `en`), not language names (i.e. `English`).
-* If languages are specified, ensure the first language is the language your résumé is written in, so that the document language is set correctly.
+* It's recommended to declare the `meta.language` property in your JSON Resume for accessibility. This is the [BCP47 tag](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/lang#language_tag_syntax) for the language your your résumé is written in. For example, `en` for English.
 
 ## Features
 
