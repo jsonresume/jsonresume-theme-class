@@ -8,7 +8,7 @@ A modern theme for [JSON Resume](http://jsonresume.org/) which is self-contained
 ## Usage
 
 ```sh
-# Install resume-cli via npm, yarn, pnpm, or whaever package manager you want
+# Install resume-cli via npm, yarn, pnpm, or whatever package manager you want
 npm install --global resume-cli
 
 # Install @jsonresume/jsonresume-theme-class in the directory resume.json is in
@@ -20,6 +20,11 @@ resume export --theme @jsonresume/jsonresume-theme-class index.html
 # Export a PDF document, it's recommended to use your name as the file name
 resume export --theme @jsonresume/jsonresume-theme-class your-name.pdf
 ```
+
+### Notes
+
+* This theme expects languages in your résumé to be defined with language codes (i.e. `en`), not language names (i.e. `English`).
+* If languages are specified, ensure the first language is the language your résumé is written in, so that the document language is set correctly.
 
 ## Features
 
@@ -42,6 +47,10 @@ Populates the `head` of the HTML document with [Open Graph](https://ogp.me/) tag
 ### Dark Mode
 
 Includes a dark mode, and uses the [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) CSS property to provide a positive user-experience.
+
+### Optimized
+
+This theme makes no external connections, doesn't embed scripts, and is lightweight by design. Both HTML and PDF exports will be minimal.
 
 ## Preview 
 
