@@ -5,13 +5,13 @@ body {
   --header-h2-fg-color: #f3f3f3;
   --header-bg-color: #1866c3;
   --link-color: #3061a5;
-  --seperator-color: #e2e2e2;
+  --separator-color: #e2e2e2;
 
   margin: 0;
   color: var(--fg-color);
   background: var(--bg-color);
   font-size: 15px;
-  font-family: 'Nimbus Sans', Helvetica, Arial, Roboto, 'Liberation Sans', 'DejaVu Sans', Arimo, sans-serif;
+  font-family: Roboto, 'Helvetica Neue', 'Arial Nova', 'Liberation Sans', Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +22,7 @@ body {
     --header-h2-fg-color: #eee;
     --header-bg-color: #1b1b1b;
     --link-color: #70a1e5;
-    --seperator-color: #939393
+    --separator-color: #939393
   }
 }
 
@@ -70,7 +70,7 @@ header h2 {
 
 #basics {
   margin-bottom: 10px;
-  border-bottom: 1px var(--seperator-color) solid;
+  border-bottom: 1px var(--separator-color) solid;
 }
 
 .split {
@@ -119,7 +119,7 @@ header h2 {
 #work,
 #volunteer {
   padding-bottom: 5px;
-  border-bottom: 1px var(--seperator-color) solid;
+  border-bottom: 1px var(--separator-color) solid;
 }
 
 #work .item,
@@ -129,7 +129,7 @@ header h2 {
 
 #skills {
   margin-bottom: 10px;
-  border-bottom: 1px var(--seperator-color) solid;
+  border-bottom: 1px var(--separator-color) solid;
   padding-bottom: 5px;
   overflow: hidden;
 }
