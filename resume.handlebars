@@ -158,21 +158,23 @@
        <div class="split">
       {{#if position}}
       <div class="work_position">
-        {{position}}
+        <img src="https://{{position}}" width=200px />
       </div>
       {{/if}}
+         
       {{#if summary}}
       <div class="summary">
         <p>{{{markdown summary}}}</p>
-      </div>
-      {{/if}}
-      {{#if highlights.length}}
+        {{#if highlights.length}}
       <ul class="highlights">
         {{#each highlights}}
         <li>{{{markdown .}}}</li>
         {{/each}}
       </ul>
       {{/if}}
+      </div>
+      {{/if}}
+      
          
       </div>
 
