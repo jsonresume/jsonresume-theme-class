@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
       - run: |
           npx resume export --theme . --resume ./resumes/latest.json /tmp/latest.html
-          npx resume export --theme . --resume ./resumes/latest.json /tmp/latest.html
+          npx resume export --theme . --resume ./resumes/latest.json /tmp/latest.pdf
       - uses: actions/upload-artifact@v4
         with:
           name: html
