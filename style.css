@@ -85,13 +85,12 @@ header h2 {
 .website,
 .email,
 .phone,
-#profiles .item,
 #languages .item,
 #interests .item
  {
   width: 50%;
 }
-
+#profiles .item,
 #skills .item {
   width: 25%;
 }
