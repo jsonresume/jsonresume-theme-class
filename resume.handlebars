@@ -157,7 +157,7 @@
       
        <div class="split">
       {{#if logo}}
-      <div class="work_position">
+      <div class="logo">
         <img src="{{logo}}" width=200px />
       </div>
       {{/if}}
@@ -177,19 +177,6 @@
       
          
       </div>
-
-      {{#if summary}}
-      <div class="summary">
-        <p>{{{markdown summary}}}</p>
-      </div>
-      {{/if}}
-      {{#if highlights.length}}
-      <ul class="highlights">
-        {{#each highlights}}
-        <li>{{{markdown .}}}</li>
-        {{/each}}
-      </ul>
-      {{/if}}
     </div>
     {{/each}}
   </section>
