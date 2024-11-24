@@ -20,3 +20,7 @@ jobs:
       - run: npm ci
       - run: npx resume export --theme . --resume ./test/fixture.resume.json /tmp/resume.html
       - run: npx resume export --theme . --resume ./test/fixture.resume.json /tmp/resume.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: html
+          path: /tmp/resume.html
