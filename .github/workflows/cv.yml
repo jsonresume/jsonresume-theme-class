@@ -1,0 +1,31 @@
+name: Build CV
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: |
+          npx resume export --theme . --resume ./resumes/latest.json /tmp/latest.html
+          npx resume export --theme . --resume ./resumes/latest.json /tmp/latest.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: html
+          path: /tmp/latest.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdf
+          path: /tmp/latest.pdf
