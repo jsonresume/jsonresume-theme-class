@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "language": "en"
+  },
+  "basics": {
+    "name": "PK",
+    "label": "Open-Sourcerer 🧙‍♂️",
+    "email": "seth@example.org",
+    "phone": "+00 0694201337",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla facilisi nullam.",
+    "location": {
+      "countryCode": "GB"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "SethFalco",
+        "url": "https://github.com/SethFalco"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "sethfalco",
+        "url": "https://www.linkedin.com/in/sethfalco/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "JSON Resume",
+      "location": "Remote",
+      "position": "Open-Sourcerer 🧙‍♂️",
+      "url": "https://jsonresume.org/",
+      "startDate": "2021-10",
+      "summary": "Facilisis volutpat est velit egestas dui id ornare.",
+      "highlights": [
+        "Sollicitudin nibh sit amet commodo nulla facilisi nullam.",
+        "A scelerisque purus semper eget.",
+        "Sed egestas egestas fringilla phasellus faucibus scelerisque.",
+        "Purus semper eget duis at tellus at urna condimentum mattis."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "SVGO",
+      "position": "Open-Sourcerer 🧙‍♂️",
+      "url": "https://svgo.dev/",
+      "startDate": "2023-09",
+      "summary": "Cursus risus at ultrices mi tempus imperdiet nulla.",
+      "highlights": [
+        "Sed odio morbi quis commodo odio aenean sed adipiscing.",
+        "Diam sollicitudin tempor id eu nisl nunc mi."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/",
+      "area": "Information Technology",
+      "studyType": "Community-Study"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "edX Verified Certificate for Introduction to Web Accessibility",
+      "date": "2023-04-17",
+      "issuer": "edX"
+    }
+  ],
+  "publications": [
+    {
+      "name": "What are Bookmarklets? How to Use JavaScript to Make a Bookmarklet in Chromium and Firefox",
+      "publisher": "freeCodeCamp",
+      "releaseDate": "2021-06-17",
+      "url": "https://www.freecodecamp.org/news/what-are-bookmarklets/"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "French",
+      "fluency": "Elementary"
+    }
+  ]
+}
