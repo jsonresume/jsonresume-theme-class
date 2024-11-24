@@ -24,3 +24,7 @@ jobs:
         with:
           name: html
           path: /tmp/resume.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdf
+          path: /tmp/resume.pdf
