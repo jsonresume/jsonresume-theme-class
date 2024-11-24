@@ -44,10 +44,19 @@
 
   {{#resume.basics}}
   <header>
-  <h1>{{name}}</h1>
-  {{#if label}}
-  <h2>{{label}}</h2>
-  {{/if}}
+  <div class="container">
+    <div id="header" class="split">
+      <div class="image">
+        <img src="{{image}}" width=100px />
+      </div>
+      <div class="main"  style="padding-left: 20px; padding-top: 15px">
+        <h1>{{name}}</h1>
+        {{#if label}}
+        <h2>{{label}}</h2>
+        {{/if}}
+      </div>  
+    </div>  
+  </div>
   </header>
 
   <div id="content" class="container">
@@ -154,19 +163,29 @@
       </div>
       {{/if}}
       </div>
-
+      
+       <div class="split">
+      {{#if logo}}
+      <div class="logo">
+        <img src="{{logo}}" width=200px />
+      </div>
+      {{/if}}
+         
       {{#if summary}}
       <div class="summary">
         <p>{{{markdown summary}}}</p>
-      </div>
-      {{/if}}
-      {{#if highlights.length}}
+        {{#if highlights.length}}
       <ul class="highlights">
         {{#each highlights}}
         <li>{{{markdown .}}}</li>
         {{/each}}
       </ul>
       {{/if}}
+      </div>
+      {{/if}}
+      
+         
+      </div>
     </div>
     {{/each}}
   </section>

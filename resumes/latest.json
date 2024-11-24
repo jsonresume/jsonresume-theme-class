@@ -6,6 +6,7 @@
   "basics": {
     "name": "PK",
     "label": "Open-Sourcerer 🧙‍♂️",
+    "image": "https://www.pknw1.co.uk/assets/images/ezgif-3-e3824c3d11.gif",
     "email": "seth@example.org",
     "phone": "+00 0694201337",
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla facilisi nullam.",
@@ -35,7 +36,8 @@
       "name": "JSON Resume",
       "location": "Remote",
       "position": "Open-Sourcerer 🧙‍♂️",
-      "url": "https://jsonresume.org/",
+      "url": "https://www.pknw1.co.uk/",
+      "logo": "https://www.pknw1.co.uk/assets/images/ezgif-3-e3824c3d11.gif",
       "startDate": "2021-10",
       "summary": "Facilisis volutpat est velit egestas dui id ornare.",
       "highlights": [
