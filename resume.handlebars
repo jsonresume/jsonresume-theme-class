@@ -45,14 +45,16 @@
   {{#resume.basics}}
   <header>
   <div class="split">
-    <div class="contact">
-      <img src="{{image}}" width=200px />
-    </div>
-    <div class="contact">
-      <h1>{{name}}</h1>
-      {{#if label}}
-      <h2>{{label}}</h2>
-      {{/if}}
+    <div id="header" class="container">
+      <div class="image">
+        <img src="{{image}}" width=100px />
+      </div>
+      <div class="main"  style="padding-left: 20px">
+        <h1>{{name}}</h1>
+        {{#if label}}
+        <h2>{{label}}</h2>
+        {{/if}}
+      </div>  
     </div>  
   </div>
   </header>
