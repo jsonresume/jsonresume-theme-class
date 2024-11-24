@@ -87,9 +87,13 @@ header h2 {
 .phone,
 #profiles .item,
 #languages .item,
-#interests .item,
-#skills .item {
+#interests .item
+ {
   width: 50%;
+}
+
+#skills .item {
+  width: 25%;
 }
 
 .username {
