@@ -148,6 +148,7 @@
   <section id="work">
     <h2>Work Experience</h2>
     {{#each resume.work}}
+    {{#if recent }}
     <div class="split">
         {{#if logo}}
           <div class="logo">
@@ -226,17 +227,18 @@
           </div>
           {{/if}}
 	</div>
-    
+    {{/if}} 
     {{/each}}
   </section>
   {{/if}}
 
 
 
-  {{#if resume.historic.length}}
+  {{#if resume.work.length}}
   <section id="historic">
     <h2>Historic Work Experience</h2>
-    {{#each resume.historic}}
+    {{#each resume.work}}
+    {{#if historic}}
     <button type="button" class="collapsible"><b>{{company}}</b> - {{position}} ({{{date startDate}}} - {{{date endDate}}})</button>
     <div class="content">
 
@@ -319,7 +321,7 @@
           {{/if}}
 	   </div>
     </div>
-
+	{{/if}}
     {{/each}}
   </section>
   {{/if}}
@@ -418,11 +420,21 @@
         {{/if}}
       </div>
 
+
+      <div class="study_date">
+        {{#if area}}
+        <span class="startDate">
+          {{area}}
+        </span>
+        {{/if}}
+      </div>      
+
       {{#if url}}
       <div class="work_website">
         {{{link url}}}
       </div>
       {{/if}}
+
       </div>
 
       {{#if qualification}}
@@ -449,10 +461,11 @@
   </section>
   {{/if}}
 
-  {{#if resume.skills.length}}
+  {{#if resume.skills.enabled }}
+  {{#if resume.skills.items.length}}
   <section id="skills">
     <h2>Skills</h2>
-    {{#each resume.skills}}
+    {{#each resume.skills.items}}
     <div class="split">
     <div class="item">
       {{#if name}}
@@ -479,13 +492,14 @@
     {{/each}}
   </section>
   {{/if}}
-
+  {{/if}}
 
 
 
   {{#if resume.languages.length}}
   <section id="languages">
     <h2>Languages</h2>
+    <div class="split">
     {{#each resume.languages}}
     <div class="item">
       {{#if language}}
@@ -498,13 +512,15 @@
       {{/if}}
     </div>
     {{/each}}
+    </div>
   </section>
   {{/if}}
 
-  {{#if resume.interests.length}}
+  {{#if resume.interests.enabled }}
+  {{#if resume.interests.items.length}}
   <section id="interests">
     <h2>interests</h2>
-    {{#each resume.interests}}
+    {{#each resume.interests.items}}
     <div class="split">
     <div class="item">
       {{#if name}}
@@ -530,6 +546,7 @@
     </div>
     {{/each}}
   </section>
+  {{/if}}
   {{/if}}
 
 
