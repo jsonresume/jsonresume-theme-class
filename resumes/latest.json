@@ -4,60 +4,269 @@
     "language": "en"
   },
   "basics": {
-    "name": "PK",
-    "label": "Open-Sourcerer 🧙‍♂️",
+    "name": "Paul Kelleher",
+    "label": "Business Driven Technology Leadership, Innovation and Engineering",
     "image": "https://www.pknw1.co.uk/assets/images/ezgif-3-e3824c3d11.gif",
-    "email": "seth@example.org",
-    "phone": "+00 0694201337",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla facilisi nullam.",
+    "email": "pk@pknw1.co.uk",
+    "phone": "+44 7884919508",
+    "website": "https://www.pknw1.co.uk",
+    "summary": "With over 30 years industry esperience, I look to engage clients  platform or workflow/process requirements through modern delivery methodologies, appropriate, risk-measured development, testing, assurance, on-demand scalable IaC infrastructure and measurable SDLC feedback",
     "location": {
       "countryCode": "GB"
     },
     "profiles": [
       {
         "network": "GitHub",
-        "username": "SethFalco",
-        "url": "https://github.com/SethFalco"
+        "username": "pknw1",
+        "url": "https://github.com/pknw1"
       },
       {
         "network": "LinkedIn",
-        "username": "sethfalco",
-        "url": "https://www.linkedin.com/in/sethfalco/"
+        "username": "pknw1",
+        "url": "https://www.linkedin.com/in/pknw1/"
       },
       {
         "network": "Docker",
-        "username": "sethfalco",
-        "url": "https://www.linkedin.com/in/sethfalco/"
+        "username": "pknw1",
+        "url": "https://hub.docker.com/u/pknw1/"
       }
     ]
   },
   "work": [
     {
-      "name": "JSON Resume",
+      "name": "Contino",
+      "company": "Contino",
       "location": "Remote",
-      "position": "Open-Sourcerer 🧙‍♂️",
-      "url": "https://www.pknw1.co.uk/",
-      "logo": "https://www.pknw1.co.uk/assets/images/ezgif-3-e3824c3d11.gif",
-      "startDate": "2021-10",
-      "summary": "Facilisis volutpat est velit egestas dui id ornare.",
+      "position": "Senior Engineering Consultant",
+      "url": "https://www.contino.io/",
+      "logo": "https://media.glassdoor.com/sqll/1389490/contino-squareLogo-1661959481704.png",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "Well recognised as one of the leading global technology consultancies, Contino is a digital transformation engineering consultancy that has evolved second to none delivery of standards/best-practice engineering as part of transformation at each stage",
+      "summary": "Well recognised as one of the leading global technology consultancies, Contino is a digital transformation engineering consultancy that has evolved second to none delivery of standards/best-practice engineering as part of transformation at each stage",
       "highlights": [
-        "Sollicitudin nibh sit amet commodo nulla facilisi nullam.",
-        "A scelerisque purus semper eget.",
-        "Sed egestas egestas fringilla phasellus faucibus scelerisque.",
-        "Purus semper eget duis at tellus at urna condimentum mattis."
+        "Immediate Client Project Allocation to major UK Energy Provider",
+        "Internal and Client Culture/Process",
+        "Active in increasing engagement consultant allocation by 200%",
+        "Highly engaged with Internal Automation shift and Standards",
+        "5000+ end user solutions",
+        "Assigned GOD azure and google roles",
+        "Awarded Azure Practice Badge",
+        "Known as the “go-to” for “impossible” engineering challenges",
+        "Fostering and Mentored 1st principle engineering"
+      ],
+      "achievements": [
+        "Full IaC Azure CIS OS Build Image Factory",
+        "Integrated and auto-managed custom development post CIS custom builds",
+        "DORA Metrics collection, processing, dashboarding",
+        "Major templating of Terraform Modules",
+        "Major templating of GitHub Workflows",
+        "Multiple Azure Landing Zones plus multiple request ingestion services (WebUi, Slack)",
+        "EA Management",
+        "IaC EA Vending with massive optional expansions for custom LZ groups"
+      ]
+    },
+      {
+      "name": "",
+      "company": "Bots",
+      "location": "Remote",
+      "position": "Senior Engineering Consultant",
+      "url": "https://www.contino.io/",
+      "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQGJrfsrTaGZJw/company-logo_200_200/0/1649348369733?e=2147483647&v=beta&t=W9PYtcy4_MRktet3O4CjZcOGwk1Hql8p3xSFr9Ry_AE",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "Well recognised as one of the leading global technology consultancies, Contino is a digital transformation engineering consultancy that has evolved second to none delivery of standards/best-practice engineering as part of transformation at each stage",
+      "summary": "Well recognised as one of the leading global technology consultancies, Contino is a digital transformation engineering consultancy that has evolved second to none delivery of standards/best-practice engineering as part of transformation at each stage",
+      "highlights": [
+            "Full autonomy over greenfield Azure and O365 integrated platform ",
+            "Process simplification and automation to improve and enhance dev to delivery",
+            ".Net into AKS using Github Actions",
+            "ISO 270001 Compliance"
+      ],
+      "achievements": [
+            "Compliance focused and policy driven dev+ environments",
+            "Complex multi-component architecture development integrated by dependencies into fire and forget dev ",
+            "Full IaC automated delivery"
       ]
     }
+
   ],
-  "volunteer": [
-    {
-      "organization": "SVGO",
-      "position": "Open-Sourcerer 🧙‍♂️",
-      "url": "https://svgo.dev/",
-      "startDate": "2023-09",
-      "summary": "Cursus risus at ultrices mi tempus imperdiet nulla.",
+  "historic": [
+
+        {
+      "name": "",
+      "company": "Vanquis Bank",
+      "location": "Remote",
+      "position": "Senior Engineering Consultant",
+      "url": "https://www.contino.io/",
+      "logo": "https://refer-a-friend.uk/wp-content/uploads/2017/11/vanquis-bank.png",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "Well recognised as one of the leading global technology consultancies, Contino is a digital transformation engineering consultancy that has evolved second to none delivery of standards/best-practice engineering as part of transformation at each stage",
+      "summary": "Transforming legacy VM & cloud infrastructure, managed by engineers who fought the change, servicing a business unsure of why cloud-first was championed by the previous CIO, what initially seemed like a challenging environment became a great opportunity to reach across the business and implement my personal style of leadership and accountability. Dedicated to optimisation this role understands the collaborative synergies within the business, melding some Development skills with Operation, security and monitoring process to deliver a highly automated, scalable and compliant product or service.  ",
       "highlights": [
-        "Sed odio morbi quis commodo odio aenean sed adipiscing.",
-        "Diam sollicitudin tempor id eu nisl nunc mi."
+      "Transforming legacy VM & cloud infrastructure, managed by engineers who fought the change, servicing a business unsure of why cloud-first was championed by the previous CIO, what initially seemed like a challenging environment became a great opportunity to reach across the business and implement my personal style of leadership and accountability.",
+      "Dedicated to optimisation this role understands the collaborative synergies within the business, melding some Development skills with Operation, security and monitoring process to deliver a highly automated, scalable and compliant product or service.  "
+      ],
+      "achievements": [
+      ]
+    },
+    {
+      "name": "",
+      "company": "Smartfocus",
+      "location": "",
+      "position": "Senior App Support Engineer / Head of Operations",
+      "url": "",
+      "logo": "https://www.appvizer.fr/media/application/1346/logo/logo-smartfocus.png",
+      "startDate": "2015-07",
+      "endDate": "2017-08",
+      "about": "",
+      "summary": "",
+      "highlights": [
+        "Lead the combination and cross skill of disparate support teams in US, UK, France and India to allow follow the sun support for all products, reducing cost and improving work-life balance for support staff and lifting moral",
+        "Centralised logging and analytics data to allow us to secure, simplify support, align focus and report cost vs usage",
+        "Abstracted cross-product session handling and inter-product calls up to F5 to allow standardisation of service calls", 
+        "Provided POC containerised instance of one of the highest volume calls and using transactional messages via message queues to show that we could migrate from direct calls to a more reliable, flexible model (AWS, Kafka, Docker)",  
+        "Planned and lead cross-functional teams to incrementally pull build elements into automated pipeline to function test and only report on error with the aim of full platform automated delivery"
+      ],
+      "achievements": [
+
+      ]
+    },
+       {
+      "name": "",
+      "company": "Fico",
+      "location": "",
+      "position": "",
+      "url": "",
+      "logo": "",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "",
+      "summary": "",
+      "highlights": [
+      ],
+      "achievements": [
+
+      ]
+    },
+       {
+      "name": "",
+      "company": "Sony",
+      "location": "",
+      "position": "",
+      "url": "",
+      "logo": "",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "",
+      "summary": "",
+      "highlights": [
+      ],
+      "achievements": [
+
+      ]
+    },
+       {
+      "name": "",
+      "company": "Mailonline",
+      "location": "",
+      "position": "",
+      "url": "",
+      "logo": "",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "",
+      "summary": "",
+      "highlights": [
+      ],
+      "achievements": [
+
+      ]
+    },
+       {
+      "name": "Citi",
+      "company": "Citi",
+      "location": "",
+      "position": "",
+      "url": "",
+      "logo": "",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "",
+      "summary": "",
+      "highlights": [
+      ],
+      "achievements": [
+
+      ]
+    },
+       {
+      "name": "",
+      "company": "Santader",
+      "location": "",
+      "position": "",
+      "url": "",
+      "logo": "",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "",
+      "summary": "",
+      "highlights": [
+      ],
+      "achievements": [
+
+      ]
+    },
+       {
+      "name": "",
+      "company": "Rubus",
+      "location": "",
+      "position": "",
+      "url": "",
+      "logo": "",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "",
+      "summary": "",
+      "highlights": [
+      ],
+      "achievements": [
+
+      ]
+    },
+       {
+      "name": "",
+      "company": "IBM",
+      "location": "",
+      "position": "",
+      "url": "",
+      "logo": "",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "",
+      "summary": "",
+      "highlights": [
+      ],
+      "achievements": [
+
+      ]
+    },
+       {
+      "name": "",
+      "company": "IBM",
+      "location": "",
+      "position": "",
+      "url": "",
+      "logo": "",
+      "startDate": "2022-02",
+      "endDate": "2023-12",
+      "about": "",
+      "summary": "",
+      "highlights": [
+      ],
+      "achievements": [
+
       ]
     }
   ],
@@ -68,6 +277,51 @@
       "area": "Information Technology",
       "studyType": "Community-Study"
     }
+  ],
+  "skills": [
+    {
+      "name": "freeCodeCamp",
+      "level": "https://www.freecodecamp.org/",
+      "keywords": ["keyworrd","other"]
+    },
+    {
+      "name": "freeCodeCamp",
+      "level": "https://www.freecodecamp.org/",
+      "keywords": ["keyworrd"]
+    },
+    {
+      "name": "freeCodeCamp",
+      "level": "https://www.freecodecamp.org/",
+      "keywords": ["keyworrd"]
+    }
+  ],
+  "interests": [
+    {
+      "name": "freeCodeCamp",
+      "keywords": ["keyworrd"]
+    },
+    {
+      "name": "freeCodeCamp",
+      "keywords": ["keyworrd"]
+    },
+    {
+      "name": "freeCodeCamp",
+      "keywords": ["keyworrd"]
+    }
+  ],
+  "tooling": [
+	  {
+            "category": "Technology",
+	    "entry": ["*nix","Azure","Docker","IaC","K8S/AKS","Agile","DevOps","IaaS","Networking","Automation","SQL","Storage","XL Deploy","Green Bone","HA Cache & CDN"]
+	  },
+          {
+            "category": "Consulting",
+            "entry": ["Requirements & Analysis","Cost/Benefit Analysis","Technology Selection","Solution Design","Solution Modelling","First Principal Iteration","SDLC/Automation","Build Automation","Test Automation","Metrics & Delivery Data","Support Models","Iterative Improvement"]
+          },
+          {
+            "category": "Leadership",
+            "entry": ["Technology Innovator","Educator","Natural Communicator","Analytical","Problem Solver","Business Focused","Cross-Discipline"]
+          }
   ],
   "certificates": [
     {
