@@ -116,16 +116,16 @@
   {{/resume.basics}}
 	
 
-  {{#if resume.tooling.length}}
+  {{#if resume.tooling.items.length}}
   <section id="tooling">
     <h2>Expertise</h2>
-      {{#if summary}}
+      {{#if resume.tooling.summary }}
       <div class="summary">
-        <p>{{summary}}</p>
+        <p>{{resume.tooling.summary}}</p>
       </div>
       {{/if}}
       <div class="split">
-      {{#each resume.tooling}}
+      {{#each resume.tooling.items}}
          <div class="category3">
 	       <h3>{{category}}</h3>
         {{#if entry.length}}
@@ -237,6 +237,7 @@
   {{#if resume.work.length}}
   <section id="historic">
     <h2>Historic Work Experience</h2>
+    <p>Historic experience has been formatted for effective display</p>
     {{#each resume.work}}
     {{#if historic}}
     <button type="button" class="collapsible"><b>{{company}}</b> - {{position}} ({{{date startDate}}} - {{{date endDate}}})</button>
