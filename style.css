@@ -37,6 +37,7 @@ a {
 
 section {
   margin-bottom: 2em;
+  border-bottom: 1px var(--separator-color) solid;
 }
 
 .item {
