@@ -36,6 +36,8 @@
     {
       "name": "Contino",
       "company": "Contino",
+      "historic": "", 
+      "recent": "true",
       "location": "Remote",
       "position": "Senior Engineering Consultant",
       "url": "https://www.contino.io/",
@@ -69,6 +71,8 @@
       {
       "name": "",
       "company": "Bots",
+      "histroic": "",
+      "recent": "true",
       "location": "Remote",
       "position": "Senior Engineering Consultant",
       "url": "https://www.contino.io/",
@@ -88,13 +92,10 @@
             "Complex multi-component architecture development integrated by dependencies into fire and forget dev ",
             "Full IaC automated delivery"
       ]
-    }
-
-  ],
-  "historic": [
-
-        {
+    },{
       "name": "",
+      "recent": "",
+      "historic" : "true",
       "company": "Vanquis Bank",
       "location": "Remote",
       "position": "Senior Engineering Consultant",
@@ -114,6 +115,8 @@
     {
       "name": "",
       "company": "Smartfocus",
+      "recent": "",
+      "historic" : "true",
       "location": "",
       "position": "Senior App Support Engineer / Head of Operations",
       "url": "",
@@ -136,6 +139,8 @@
        {
       "name": "",
       "company": "Fico",
+      "recent": "",
+      "historic" : "true",
       "location": "",
       "position": "",
       "url": "",
@@ -153,6 +158,8 @@
        {
       "name": "",
       "company": "Sony",
+      "recent": "",
+      "historic" : "true",
       "location": "",
       "position": "",
       "url": "",
@@ -170,6 +177,8 @@
        {
       "name": "",
       "company": "Mailonline",
+      "recent": "",
+      "historic" : "true",
       "location": "",
       "position": "",
       "url": "",
@@ -187,6 +196,8 @@
        {
       "name": "Citi",
       "company": "Citi",
+      "recent": "",
+      "historic" : "true",
       "location": "",
       "position": "",
       "url": "",
@@ -204,6 +215,8 @@
        {
       "name": "",
       "company": "Santader",
+      "recent": "",
+      "historic" : "true",
       "location": "",
       "position": "",
       "url": "",
@@ -221,6 +234,8 @@
        {
       "name": "",
       "company": "Rubus",
+      "recent": "",
+      "historic" : "true",
       "location": "",
       "position": "",
       "url": "",
@@ -238,6 +253,8 @@
        {
       "name": "",
       "company": "IBM",
+      "recent": "",
+      "historic" : "true",
       "location": "",
       "position": "",
       "url": "",
@@ -255,6 +272,8 @@
        {
       "name": "",
       "company": "IBM",
+      "recent": "",
+      "historic" : "true",
       "location": "",
       "position": "",
       "url": "",
@@ -272,13 +291,15 @@
   ],
   "education": [
     {
-      "institution": "freeCodeCamp",
-      "url": "https://www.freecodecamp.org/",
-      "area": "Information Technology",
-      "studyType": "Community-Study"
+      "institution": "UWE Bristol",
+      "url": "https://www.uwe.ac.uk",
+      "area": "Computing for Real Time Systems",
+      "studyType": "BSc (Hons)"
     }
   ],
-  "skills": [
+  "skills": {
+	  "enabled": "",
+	  "items": [
     {
       "name": "freeCodeCamp",
       "level": "https://www.freecodecamp.org/",
@@ -294,21 +315,17 @@
       "level": "https://www.freecodecamp.org/",
       "keywords": ["keyworrd"]
     }
-  ],
-  "interests": [
-    {
-      "name": "freeCodeCamp",
-      "keywords": ["keyworrd"]
-    },
-    {
-      "name": "freeCodeCamp",
-      "keywords": ["keyworrd"]
-    },
-    {
-      "name": "freeCodeCamp",
-      "keywords": ["keyworrd"]
-    }
-  ],
+  ]
+  },
+  "interests": { 
+  	"enabled" : "",
+	"items" : [
+    	{
+      	"name": "",
+      	"keywords": []
+    	}
+  ]
+  },
   "tooling": [
 	  {
             "category": "Technology",
