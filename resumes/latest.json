@@ -6,7 +6,7 @@
   "basics": {
     "name": "Paul Kelleher",
     "label": "Business Driven Technology Leadership, Innovation and Engineering",
-    "image": "https://www.pknw1.co.uk/assets/images/ezgif-3-e3824c3d11.gif",
+    "image": "https://www.pknw1.co.uk/assets/images/icon-128x77.png",
     "email": "pk@pknw1.co.uk",
     "phone": "+44 7884919508",
     "website": "https://www.pknw1.co.uk",
@@ -326,7 +326,9 @@
     	}
   ]
   },
-  "tooling": [
+  "tooling": {
+	  "summary": "lalalal",
+	  "items" : [
 	  {
             "category": "Technology",
 	    "entry": ["*nix","Azure","Docker","IaC","K8S/AKS","Agile","DevOps","IaaS","Networking","Automation","SQL","Storage","XL Deploy","Green Bone","HA Cache & CDN"]
@@ -339,7 +341,8 @@
             "category": "Leadership",
             "entry": ["Technology Innovator","Educator","Natural Communicator","Analytical","Problem Solver","Business Focused","Cross-Discipline"]
           }
-  ],
+  ]
+  },
   "certificates": [
     {
       "name": "edX Verified Certificate for Introduction to Web Accessibility",
