@@ -216,6 +216,56 @@
     </section>
     {{/if}}
 
+    {{#if resume.projects.length}}
+    <section id="projects">
+      <h2>Projects</h2>
+      {{#each resume.projects}}
+      <div class="item">
+        {{#if name}}
+        <h3 class="project_name">
+          {{#if url}}
+          <a href="{{url}}" target="_blank"
+            rel="noopener noreferrer">{{name}}</a>
+          {{else}}
+          {{name}}
+          {{/if}}
+        </h3>
+        {{/if}}
+
+        <div class="split">
+          {{#if entity}}
+          <div class="project_entity">
+            {{entity}}
+          </div>
+          {{/if}}
+          <div class="project_date">
+            {{#if startDate}}
+            {{#if endDate}}
+            {{{date startDate}}} - {{{date endDate}}}
+            {{else}}
+            {{{date startDate}}}
+            {{/if}}
+            {{/if}}
+          </div>
+        </div>
+
+        {{#if description}}
+        <div class="summary">
+          <p>{{{markdown description}}}</p>
+        </div>
+        {{/if}}
+        {{#if highlights.length}}
+        <ul class="highlights">
+          {{#each highlights}}
+          <li>{{{markdown .}}}</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+
     {{#if resume.education.length}}
     <section id="education">
       <h2>Education</h2>
