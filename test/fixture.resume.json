@@ -54,6 +54,19 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "name": "JSON Resume Class Theme",
+      "description": "Suspendisse at nulla vitae ligula interdum pretium. Donec.",
+      "url": "https://github.com/jsonresume/jsonresume-theme-class/",
+      "entity": "JSON Resume",
+      "startDate": "2022-07-17",
+      "highlights": [
+        "Nunc imperdiet pharetra eros, sed sodales lectus faucibus.",
+        "Donec mauris lectus, euismod vitae nunc fermentum, dapibus."
+      ]
+    }
+  ],
   "education": [
     {
       "institution": "freeCodeCamp",
