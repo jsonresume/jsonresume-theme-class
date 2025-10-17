@@ -21,31 +21,38 @@ resume export --theme @jsonresume/jsonresume-theme-class index.html
 resume export --theme @jsonresume/jsonresume-theme-class your-name.pdf
 ```
 
-### Notes
+### Accessibility
 
-* It's recommended to declare the `meta.language` property in your JSON Resume for accessibility. This is the [BCP47 tag](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/lang#language_tag_syntax) for the language your your résumé is written in. For example, `en` for English.
+It's recommended to declare the `meta.language` property in your JSON Resume for accessibility. This is the [BCP47 tag](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/lang#language_tag_syntax) for the language your résumé is written in. For example, `en` for English.
+
+### For Servers
+
+**Heads-up!** ⚠️ This project _doesn't_ sanitize the input/output. Typical usage is to run this locally with your own JSON Resume, so a trustworthy environment with trustworthy input. If this project will be deployed in a server environment, you must use a library like [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the output.
 
 ## Features
 
 ### JSON Resume 1.0.0
 
-This supports the JSON Resume 1.0.0 spec, and is backward compatible with earlier versions.
+This supports the JSON Resume 1.0.0 spec and is backward compatible with earlier versions.
 
 ### Application Tracking System (ATS) Friendly
 
-Many companies and recruiters use [ATS](https://en.wikipedia.org/wiki/Applicant_tracking_system) systems that [parse CV's](https://en.wikipedia.org/wiki/R%C3%A9sum%C3%A9_parsing) and extract the information into a standard format. Part of maintaining this theme includes reviewing this and adhering to standard practices when building the résumé.
+Many companies and recruiters use [ATS](https://wikipedia.org/wiki/Applicant_tracking_system) systems that [parse CVs](https://wikipedia.org/wiki/R%C3%A9sum%C3%A9_parsing) and extract the information into a standard format. We review some of these tools and adhere to standard practices while building the theme.
 
 ### Markdown
 
-You can use inline Markdown on properties to make text bold, italic, or link them to external pages. This namely applies to the `summary` and `highlights` properties in the JSON Resume schema.
+You can use inline Markdown in the following properties to make text bold, italic, or link them to external pages:
+
+* `summary`
+* `highlights`
 
 ### Open Graph Protocol
 
-Populates the `head` of the HTML document with [Open Graph](https://ogp.me/) tags. This allows social media platforms and instant messengers to create embeds when your résumé is shared.
+Populates the `head` of the HTML document with [Open Graph](https://ogp.me/) tags. This enables social media platforms and instant messengers to create embeds when your résumé is shared.
 
 ### Dark Mode
 
-Includes a dark mode, and uses the [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) CSS property to provide a positive user-experience.
+Includes a dark mode, and uses the [`prefers-color-scheme`](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-color-scheme) CSS property to provide a positive user-experience.
 
 ### Optimized
 
@@ -53,4 +60,4 @@ This theme makes no external connections, doesn't embed scripts, and is lightwei
 
 ## Preview 
 
-![Preview of Class theme for JSON Resume.](./assets/preview.png)
+![Two screenshots of the Class theme for JSON Resume side-by-side. On the left-side, we see the light mode variant, while on the right-side is the dark mode variant.](./assets/preview.png)
