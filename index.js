@@ -1,7 +1,7 @@
-const fs = require("fs");
-const Handlebars = require("handlebars");
-const { marked } = require("marked");
-const { minify } = require('html-minifier');
+import fs from 'node:fs';
+import Handlebars from 'handlebars';
+import { marked } from 'marked';
+import { minify } from 'html-minifier';
 
 /**
  * Custom renderer for marked, namely to disable unwanted features.
@@ -79,9 +79,9 @@ Handlebars.registerHelper("link", (body) => {
  * @param {Object} resume
  * @returns {string}
  */
-function render(resume) {
-  const css = fs.readFileSync(__dirname + "/style.css", "utf-8");
-  const template = fs.readFileSync(__dirname + "/resume.handlebars", "utf-8");
+export function render(resume) {
+  const css = fs.readFileSync(import.meta.dirname + "/style.css", "utf-8");
+  const template = fs.readFileSync(import.meta.dirname + "/resume.handlebars", "utf-8");
   const { profiles } = resume.basics;
 
   if (Array.isArray(profiles)) {
@@ -118,7 +118,3 @@ function render(resume) {
 
   return minify(html, minifyOptions);
 }
-
-module.exports = {
-  render
-};
