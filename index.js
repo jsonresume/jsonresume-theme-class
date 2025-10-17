@@ -7,29 +7,29 @@ const { minify } = require('html-minifier');
  * Custom renderer for marked, namely to disable unwanted features.
  * We only want to allow basic inline elements, like links, bold, or inline-code.
  *
- * @type {object}
+ * @type {import('marked').RendererObject}
  */
 const renderer = {
-  heading(text) {
-    return text;
+  heading(heading) {
+    return heading.text;
   },
   html(html) {
-    return html;
+    return html.text;
   },
   hr() {
     return '';
   },
-  list(body) {
-    return body;
+  list(list) {
+    return list.raw;
   },
   listitem(text) {
-    return text;
+    return text.text;
   },
   br() {
     return '';
   },
   paragraph(text) {
-    return text;
+    return text.text;
   }
 }
 
