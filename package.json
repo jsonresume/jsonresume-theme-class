@@ -28,6 +28,7 @@
   ],
   "scripts": {
     "serve": "resume serve --theme . --resume ./test/fixture.resume.json",
+    "typecheck": "tsc --noEmit",
     "build:pdf": "resume export --theme . --resume ./test/fixture.resume.json resume.pdf",
     "build:html": "resume export --theme . --resume ./test/fixture.resume.json resume.html"
   },
@@ -40,6 +41,9 @@
     "marked": "^16.4.1"
   },
   "devDependencies": {
-    "resume-cli": "^3.1.2"
+    "@types/html-minifier": "^4.0.5",
+    "@types/node": "^24.8.1",
+    "resume-cli": "^3.1.2",
+    "typescript": "^5.9.3"
   }
 }
