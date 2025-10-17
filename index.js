@@ -114,7 +114,7 @@ export async function render(resume) {
     }
   }
 
-  const [ css, template ] = await loading;
+  const [css, template] = await loading;
   const html = Handlebars.compile(template)({
     css,
     resume

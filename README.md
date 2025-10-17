@@ -43,8 +43,8 @@ Many companies and recruiters use [ATS](https://wikipedia.org/wiki/Applicant_tra
 
 You can use inline Markdown in the following properties to make text bold, italic, or link them to external pages:
 
-* `summary`
-* `highlights`
+- `summary`
+- `highlights`
 
 ### Open Graph Protocol
 
@@ -58,6 +58,6 @@ Includes a dark mode, and uses the [`prefers-color-scheme`](https://developer.mo
 
 This theme makes no external connections, doesn't embed scripts, and is lightweight by design. Both HTML and PDF exports will be minimal.
 
-## Preview 
+## Preview
 
 ![Two screenshots of the Class theme for JSON Resume side-by-side. On the left-side, we see the light mode variant, while on the right-side is the dark mode variant.](./assets/preview.png)
