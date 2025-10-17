@@ -1,10 +1,10 @@
 {
+  "packageManager": "yarn@4.10.3",
   "name": "@jsonresume/jsonresume-theme-class",
   "version": "0.4.2",
   "description": "Class Theme for JSON Resume",
   "author": "Seth Falco",
   "license": "MIT",
-  "private": false,
   "keywords": [
     "resume",
     "cv",
@@ -17,6 +17,14 @@
     "type": "git",
     "url": "https://github.com/jsonresume/jsonresume-theme-class"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "package.json",
+    "resume.handlebars",
+    "style.css"
+  ],
   "scripts": {
     "serve": "resume serve --theme .  --resume ./test/fixture.resume.json",
     "build:pdf": "resume export --theme . --resume ./test/fixture.resume.json resume.pdf",
