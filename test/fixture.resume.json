@@ -5,7 +5,7 @@
   },
   "basics": {
     "name": "Seth Falco",
-    "label": "Open-Sourcerer 🧙‍♂️",
+    "label": "Open Sourcerer 🧙‍♂️",
     "email": "seth@example.org",
     "phone": "+00 0694201337",
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla facilisi nullam.",
@@ -29,8 +29,8 @@
     {
       "name": "JSON Resume",
       "location": "Remote",
-      "position": "Open-Sourcerer 🧙‍♂️",
-      "url": "https://jsonresume.org/",
+      "position": "Open Sourcerer 🧙‍♂️",
+      "url": "https://jsonresume.org",
       "startDate": "2021-10",
       "summary": "Facilisis volutpat est velit egestas dui id ornare.",
       "highlights": [
@@ -44,8 +44,8 @@
   "volunteer": [
     {
       "organization": "SVGO",
-      "position": "Open-Sourcerer 🧙‍♂️",
-      "url": "https://svgo.dev/",
+      "position": "Open Sourcerer 🧙‍♂️",
+      "url": "https://svgo.dev",
       "startDate": "2023-09",
       "summary": "Cursus risus at ultrices mi tempus imperdiet nulla.",
       "highlights": [
@@ -57,7 +57,7 @@
   "education": [
     {
       "institution": "freeCodeCamp",
-      "url": "https://www.freecodecamp.org/",
+      "url": "https://www.freecodecamp.org",
       "area": "Information Technology",
       "studyType": "Community-Study"
     }
@@ -75,6 +75,17 @@
       "publisher": "freeCodeCamp",
       "releaseDate": "2021-06-17",
       "url": "https://www.freecodecamp.org/news/what-are-bookmarklets/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "level": "Advanced",
+      "keywords": [
+        "React",
+        "Vue",
+        "Angular"
+      ]
     }
   ],
   "languages": [
