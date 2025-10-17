@@ -82,6 +82,13 @@ header h2 {
   margin-right: 2em;
 }
 
+.project_entity,
+.project_date,
+.project_website {
+  margin-bottom: 10px;
+  width: 30%;
+}
+
 .website,
 .email,
 .phone,
@@ -117,13 +124,15 @@ header h2 {
 }
 
 #work,
-#volunteer {
+#volunteer,
+#projects {
   padding-bottom: 5px;
   border-bottom: 1px var(--separator-color) solid;
 }
 
 #work .item,
-#volunteer .item {
+#volunteer .item,
+#projects .item {
   margin: 25px 0;
 }
 
