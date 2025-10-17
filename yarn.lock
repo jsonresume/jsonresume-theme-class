@@ -96,8 +96,8 @@ __metadata:
   dependencies:
     handlebars: "npm:^4.7.8"
     html-minifier: "npm:^4.0.0"
-    marked: "npm:^11.1.1"
-    resume-cli: "npm:^3.0.8"
+    marked: "npm:^16.4.1"
+    resume-cli: "npm:^3.1.2"
   languageName: unknown
   linkType: soft
 
@@ -2979,12 +2979,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^11.1.1":
-  version: 11.2.0
-  resolution: "marked@npm:11.2.0"
+"marked@npm:^16.4.1":
+  version: 16.4.1
+  resolution: "marked@npm:16.4.1"
   bin:
     marked: bin/marked.js
-  checksum: 10c0/4713cceabdcd0b4de9a156d601a55ae7e9091cd89ba75d8283042ddbbedb7cd765e02445a80be01131aa24a79003346fc650d66bf4423f7aa186dcc46b403849
+  checksum: 10c0/2b5bc04db3453e493ea78758f1fe5006d725ec90aab9bf991242b0820a069d9748e2ac26fb0e2603848a409649c77900e599f3f66d251d0f7e5f606576090a54
   languageName: node
   linkType: hard
 
@@ -4035,7 +4035,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resume-cli@npm:^3.0.8":
+"resume-cli@npm:^3.1.2":
   version: 3.1.2
   resolution: "resume-cli@npm:3.1.2"
   dependencies:
