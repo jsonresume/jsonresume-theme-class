@@ -1,11 +1,11 @@
 import fs from 'node:fs/promises';
 import Handlebars from 'handlebars';
-import { marked } from 'marked';
 import { minify } from 'html-minifier';
+import { marked } from 'marked';
 
 /**
- * Custom renderer for marked, namely to disable unwanted features.
- * We only want to allow basic inline elements, like links, bold, or inline-code.
+ * Custom renderer for marked, namely to disable unwanted features. We only want
+ * to allow basic inline elements, like links, bold, or inline-code.
  *
  * @type {import('marked').RendererObject}
  */
@@ -49,27 +49,27 @@ const minifyOptions = {
   sortClassName: true,
 };
 
-Handlebars.registerHelper("date", (body) => {
+Handlebars.registerHelper('date', (body) => {
   if (!body) {
-    return "Present"
+    return 'Present'
   }
 
   const date = new Date(body);
 
   const datetime = date.toISOString();
   const localeString = date.toLocaleDateString('en-US', {
-    month: "short",
-    year: "numeric"
+    month: 'short',
+    year: 'numeric'
   });
 
   return `<time datetime="${datetime}">${localeString}</time>`;
 });
 
-Handlebars.registerHelper("markdown", (body) => {
+Handlebars.registerHelper('markdown', (body) => {
   return marked.parse(body);
 });
 
-Handlebars.registerHelper("link", (body) => {
+Handlebars.registerHelper('link', (body) => {
   const parsed = new URL(body);
   const host = (parsed.host.startsWith('www.')) ? parsed.host.substring(4) : parsed.host;
   return `<a href="${body}">${host}</a>`;
@@ -81,8 +81,8 @@ Handlebars.registerHelper("link", (body) => {
  */
 export async function render(resume) {
   const loading = Promise.all([
-    fs.readFile(import.meta.dirname + "/style.css", "utf-8"),
-    fs.readFile(import.meta.dirname + "/resume.handlebars", "utf-8"),
+    fs.readFile(import.meta.dirname + '/style.css', 'utf-8'),
+    fs.readFile(import.meta.dirname + '/resume.handlebars', 'utf-8'),
   ]);
 
   const { profiles } = resume.basics;
