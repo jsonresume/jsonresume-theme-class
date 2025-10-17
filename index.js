@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+import fs from 'node:fs/promises';
 import Handlebars from 'handlebars';
 import { marked } from 'marked';
 import { minify } from 'html-minifier';
@@ -77,11 +77,14 @@ Handlebars.registerHelper("link", (body) => {
 
 /**
  * @param {Object} resume
- * @returns {string}
+ * @returns {Promise<string>}
  */
-export function render(resume) {
-  const css = fs.readFileSync(import.meta.dirname + "/style.css", "utf-8");
-  const template = fs.readFileSync(import.meta.dirname + "/resume.handlebars", "utf-8");
+export async function render(resume) {
+  const [ css, template ] = await Promise.all([
+    fs.readFile(import.meta.dirname + "/style.css", "utf-8"),
+    fs.readFile(import.meta.dirname + "/resume.handlebars", "utf-8"),
+  ]);
+
   const { profiles } = resume.basics;
 
   if (Array.isArray(profiles)) {
