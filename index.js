@@ -76,11 +76,11 @@ Handlebars.registerHelper("link", (body) => {
 });
 
 /**
- * @param {Object} resume
+ * @param {any} resume
  * @returns {Promise<string>}
  */
 export async function render(resume) {
-  const [ css, template ] = await Promise.all([
+  const loading = Promise.all([
     fs.readFile(import.meta.dirname + "/style.css", "utf-8"),
     fs.readFile(import.meta.dirname + "/resume.handlebars", "utf-8"),
   ]);
@@ -114,6 +114,7 @@ export async function render(resume) {
     }
   }
 
+  const [ css, template ] = await loading;
   const html = Handlebars.compile(template)({
     css,
     resume
