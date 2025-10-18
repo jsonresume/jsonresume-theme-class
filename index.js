@@ -76,6 +76,112 @@ Handlebars.registerHelper('link', (body) => {
 });
 
 /**
+ * Many users still have JSON Resumes written against old versions of the
+ * schema. We detect this and upgrade them to the latest version behind the
+ * scenes.
+ *
+ * Writes to the object directly.
+ *
+ * @param {any} resume
+ * @returns {boolean}
+ *   If the JSON Resume was modified. (i.e. was using outdated property names)
+ *
+ * @see https://github.com/jsonresume/resume-schema/releases/tag/v0.0.17
+ * @see https://github.com/jsonresume/resume-schema/releases/tag/v0.0.12
+ */
+function upgradeOutdatedResume(resume) {
+  let upgraded = false;
+
+  if (resume.bio && !resume.basics) {
+    resume.basics = resume.bio;
+    upgraded = true;
+  }
+
+  if ((resume.basics?.firstName || resume.basics?.lastName) && !resume.basics.name) {
+    const names = [];
+
+    if (resume.basics.firstName) {
+      names.push(resume.basics.firstName);
+    }
+
+    if (resume.basics.lastName) {
+      names.push(resume.basics.lastName);
+    }
+
+    resume.basics.name = names.join(' ');
+    upgraded = true;
+  }
+
+  if (resume.basics?.picture && !resume.basics.image) {
+    resume.basics.image = resume.basics.picture;
+    upgraded = true;
+  }
+
+  if (resume.basics?.website && !resume.basics.url) {
+    resume.basics.url = resume.basics.website;
+    upgraded = true;
+  }
+
+  if (resume.basics?.state && !resume.basics?.region) {
+    resume.basics.region = resume.basics.state;
+    upgraded = true;
+  }
+
+  if (Array.isArray(resume.work)) {
+    for (const work of resume.work) {
+      if (work?.company && !work.name) {
+        work.name = work.company;
+        upgraded = true;
+      }
+
+      if (work?.website && !work.url) {
+        work.url = work.website;
+        upgraded = true;
+      }
+    }
+  }
+
+  if (Array.isArray(resume.volunteer)) {
+    for (const volunteer of resume.volunteer) {
+      if (volunteer?.website && !volunteer.url) {
+        volunteer.url = volunteer.website;
+        upgraded = true;
+      }
+    }
+  }
+
+  if (Array.isArray(resume.publications)) {
+    for (const publication of resume.publications) {
+      if (publication?.website && !publication.url) {
+        publication.url = publication.website;
+        upgraded = true;
+      }
+    }
+  }
+
+  if (resume.hobbies && !resume.interests) {
+    resume.interests = resume.hobbies;
+    upgraded = true;
+  }
+
+  if (Array.isArray(resume.languages)) {
+    for (const language of resume.languages) {
+      if (language?.name && !language.language) {
+        language.language = language.name;
+        upgraded = true;
+      }
+
+      if (language?.level && !language.fluency) {
+        language.fluency = language.level;
+        upgraded = true;
+      }
+    }
+  }
+
+  return upgraded;
+}
+
+/**
  * @param {any} resume
  * @returns {Promise<string>}
  */
@@ -85,9 +191,12 @@ export async function render(resume) {
     fs.readFile(import.meta.dirname + '/resume.handlebars', 'utf-8'),
   ]);
 
-  const { profiles } = resume.basics;
+  if (upgradeOutdatedResume(resume)) {
+    console.warn('⚠️  Resume is written against an outdated version of the JSON Resume schema.\n⚠️  This will still work, but you should consider updating your resume.\n⚠️  See: https://jsonresume.org/schema');
+  }
 
-  if (Array.isArray(profiles)) {
+  if (Array.isArray(resume.basics?.profiles)) {
+    const { profiles } = resume.basics;
     const xTwitter = profiles.find((profile) => {
       const name = profile.network.toLowerCase();
       return name === 'x' || name === 'twitter';
