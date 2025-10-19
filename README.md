@@ -60,4 +60,4 @@ This theme makes no external connections, doesn't embed scripts, and is lightwei
 
 ## Preview
 
-![Two screenshots of the Class theme for JSON Resume side-by-side. On the left-side, we see the light mode variant, while on the right-side is the dark mode variant.](./assets/preview.png)
+<img src="./assets/preview-light.png" width="49%" alt="The Class theme for JSON Resume rendered with mock data. Features a plain blue bar at the top containing the candidates name and role, then a plain white background with contact information, work experience, volunteer information, etc."/> <img src="./assets/preview-dark.png" width="49%" alt="The Class theme for JSON Resume rendered with mock data when dark mode is detected. Features a dark gray bar at the top containing the candidates name and role, then a slightly lighter gray background with contact information, work experience, volunteer information, etc."/>

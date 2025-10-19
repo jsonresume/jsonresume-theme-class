@@ -218,10 +218,11 @@ __metadata:
     "@types/node": "npm:^24.8.1"
     eslint: "npm:^9.38.0"
     eslint-plugin-import: "npm:^2.32.0"
-    globals: "npm:^16.4.0"
+    globals: "npm:^14.0.0"
     handlebars: "npm:^4.7.8"
     html-minifier: "npm:^4.0.0"
     marked: "npm:^16.4.1"
+    puppeteer: "npm:^18.2.1"
     resume-cli: "npm:^3.1.2"
     typescript: "npm:^5.9.3"
   languageName: unknown
@@ -2812,13 +2813,6 @@ __metadata:
   version: 14.0.0
   resolution: "globals@npm:14.0.0"
   checksum: 10c0/b96ff42620c9231ad468d4c58ff42afee7777ee1c963013ff8aabe095a451d0ceeb8dcd8ef4cbd64d2538cef45f787a78ba3a9574f4a634438963e334471302d
-  languageName: node
-  linkType: hard
-
-"globals@npm:^16.4.0":
-  version: 16.4.0
-  resolution: "globals@npm:16.4.0"
-  checksum: 10c0/a14b447a78b664b42f6d324e8675fcae6fe5e57924fecc1f6328dce08af9b2ca3a3138501e1b1f244a49814a732dc60cfc1aa24e714e0b64ac8bd18910bfac90
   languageName: node
   linkType: hard
 

@@ -31,6 +31,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "typecheck": "tsc --noEmit",
+    "generate-preview": "node scripts/generate-preview.js",
     "build:pdf": "resume export --theme . --resume ./test/fixture.resume.json resume.pdf",
     "build:html": "resume export --theme . --resume ./test/fixture.resume.json resume.html"
   },
@@ -48,7 +49,8 @@
     "@types/node": "^24.8.1",
     "eslint": "^9.38.0",
     "eslint-plugin-import": "^2.32.0",
-    "globals": "^16.4.0",
+    "globals": "^14.0.0",
+    "puppeteer": "^18.2.1",
     "resume-cli": "^3.1.2",
     "typescript": "^5.9.3"
   }
