@@ -3,6 +3,12 @@ import Handlebars from 'handlebars';
 import { minify } from 'html-minifier';
 import { marked } from 'marked';
 
+const DATE_LOCALE = 'en-US';
+/** @type {Intl.DateTimeFormatOptions} */
+const LONG_DATE_FORMAT = { month: 'short', year: 'numeric' };
+/** @type {Intl.DateTimeFormatOptions} */
+const SHORT_DATE_FORMAT = { year: 'numeric' };
+
 /**
  * Custom renderer for marked, namely to disable unwanted features. We only want
  * to allow basic inline elements, like links, bold, or inline-code.
@@ -49,27 +55,25 @@ const minifyOptions = {
   sortClassName: true,
 };
 
-Handlebars.registerHelper('date', (body) => {
+Handlebars.registerHelper('date', /** @param {string} body */ (body) => {
   if (!body) {
     return 'Present'
   }
 
   const date = new Date(body);
-
   const datetime = date.toISOString();
-  const localeString = date.toLocaleDateString('en-US', {
-    month: 'short',
-    year: 'numeric'
-  });
+  const localeString = body.split('-').length !== 1
+    ? date.toLocaleDateString(DATE_LOCALE, LONG_DATE_FORMAT)
+    : date.toLocaleDateString(DATE_LOCALE, SHORT_DATE_FORMAT);
 
   return `<time datetime="${datetime}">${localeString}</time>`;
 });
 
-Handlebars.registerHelper('markdown', (body) => {
+Handlebars.registerHelper('markdown', /** @param {string} body */ (body) => {
   return marked.parse(body);
 });
 
-Handlebars.registerHelper('link', (body) => {
+Handlebars.registerHelper('link', /** @param {string} body */ (body) => {
   const parsed = new URL(body);
   const host = (parsed.host.startsWith('www.')) ? parsed.host.substring(4) : parsed.host;
   return `<a href="${body}">${host}</a>`;
