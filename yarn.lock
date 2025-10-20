@@ -111,6 +111,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fluent/bundle@npm:^0.19.1":
+  version: 0.19.1
+  resolution: "@fluent/bundle@npm:0.19.1"
+  checksum: 10c0/87ed606b47c37fe722b0c07808344115e51720bc3e33e1661d4b8e21ca629761592bac96af27c7cb5be0dd03ec6175207019c387f2a37c42c58aa56feb857cc0
+  languageName: node
+  linkType: hard
+
+"@fluent/langneg@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@fluent/langneg@npm:0.7.0"
+  checksum: 10c0/081f8fb3f11cecae91647e8dfd70966fdcd93b1ca531eb4dc36cf867d33f8e4196f5fe2e9d0d3ada163d6cf810aef98c781fbdcff218a1c7fc83106162425ab2
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -214,6 +228,8 @@ __metadata:
   resolution: "@jsonresume/jsonresume-theme-class@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.38.0"
+    "@fluent/bundle": "npm:^0.19.1"
+    "@fluent/langneg": "npm:^0.7.0"
     "@types/html-minifier": "npm:^4.0.5"
     "@types/node": "npm:^24.8.1"
     eslint: "npm:^9.38.0"

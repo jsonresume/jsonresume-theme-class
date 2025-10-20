@@ -7,10 +7,10 @@
 
 <head>
   {{#if resume.basics.name}}
-  <title>{{resume.basics.name}} - CV</title>
+  <title>{{i18n "title" "name" resume.basics.name}}</title>
   <meta property="og:site_name" content="{{resume.basics.name}}">
   {{else}}
-  <title>CV</title>
+  <title>{{i18n "curriculum-vitae"}}</title>
   {{/if}}
 
   {{#if resume.basics.summary}}
@@ -26,7 +26,7 @@
   <meta property="og:image" content="{{resume.basics.image}}">
   <link rel="icon" href="{{resume.basics.image}}">
   {{#if resume.basics.name}}
-  <meta property="og:image:alt" content="Avatar of {{resume.basics.name}}.">
+  <meta property="og:image:alt" content="{{i18n "avatar" "name" resume.basics.name}}">
   {{/if}}
   {{/if}}
 
@@ -57,24 +57,24 @@
   <div id="content" class="container">
     <section id="basics">
       <div class="contact">
-        <h3>Contact</h3>
+        <h3>{{i18n "contact"}}</h3>
         <div class="split">
           {{#if url}}
           <div class="website">
-            <strong>Website</strong>
+            <strong>{{i18n "website"}}</strong>
 
             {{{link url}}}
           </div>
           {{/if}}
           {{#if email}}
           <div class="email">
-            <strong>Email</strong>
+            <strong>{{i18n "email"}}</strong>
             <a href="mailto:{{email}}">{{email}}</a>
           </div>
           {{/if}}
           {{#if phone}}
           <div class="phone">
-            <strong>Phone</strong>
+            <strong>{{i18n "phone"}}</strong>
             <a href="tel:{{phone}}">{{phone}}</a>
           </div>
           {{/if}}
@@ -82,7 +82,7 @@
       </div>
       {{#if summary}}
       <div class="summary">
-        <h3>About</h3>
+        <h3>{{i18n "about"}}</h3>
         <p>{{{markdown summary}}}</p>
       </div>
       {{/if}}
@@ -117,7 +117,7 @@
 
     {{#if resume.work.length}}
     <section id="work">
-      <h2>Work Experience</h2>
+      <h2>{{i18n "work-experience"}}</h2>
       {{#each resume.work}}
       <div class="item">
         {{#if name}}
@@ -165,7 +165,7 @@
 
     {{#if resume.volunteer.length}}
     <section id="volunteer">
-      <h2>Volunteer</h2>
+      <h2>{{i18n "volunteer"}}</h2>
       {{#each resume.volunteer}}
       <div class="item">
         {{#if organization}}
@@ -218,7 +218,7 @@
 
     {{#if resume.projects.length}}
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>{{i18n "projects"}}</h2>
       {{#each resume.projects}}
       <div class="item">
         {{#if name}}
@@ -268,7 +268,7 @@
 
     {{#if resume.education.length}}
     <section id="education">
-      <h2>Education</h2>
+      <h2>{{i18n "education"}}</h2>
       {{#each resume.education}}
       <div class="item">
 
@@ -313,7 +313,7 @@
 
         {{#if dissertation}}
         <div class="dissertation">
-          <span>Dissertation: </span>{{dissertation}}
+          <span>{{i18n "dissertation" "text" dissertation}}</span>
         </div>
         {{/if}}
       </div>
@@ -323,7 +323,7 @@
 
     {{#if resume.skills.length}}
     <section id="skills">
-      <h2>Skills</h2>
+      <h2>{{i18n "skills"}}</h2>
       {{#each resume.skills}}
       <div class="item">
         {{#if name}}
@@ -350,7 +350,7 @@
 
     {{#if resume.languages.length}}
     <section id="languages">
-      <h2>Languages</h2>
+      <h2>{{i18n "languages"}}</h2>
       {{#each resume.languages}}
       <div class="item">
         {{#if language}}
@@ -368,7 +368,7 @@
 
     {{#if resume.interests.length}}
     <section id="interests">
-      <h2>Interests</h2>
+      <h2>{{i18n "interests"}}</h2>
       {{#each resume.interests}}
       <div class="item">
         {{#if name}}
@@ -390,7 +390,7 @@
 
     {{#if resume.references.length}}
     <section id="references">
-      <h2>References</h2>
+      <h2>{{i18n "references"}}</h2>
       {{#each resume.references}}
       <div class="item">
         {{#if reference}}

@@ -19,12 +19,11 @@
     "url": "https://github.com/jsonresume/jsonresume-theme-class"
   },
   "files": [
-    "LICENSE",
-    "README.md",
     "index.js",
+    "LICENSE",
     "package.json",
-    "resume.handlebars",
-    "style.css"
+    "README.md",
+    "src/"
   ],
   "scripts": {
     "serve": "resume serve --theme . --resume ./test/fixture.resume.json",
@@ -39,6 +38,8 @@
     "node": ">=v20.11"
   },
   "dependencies": {
+    "@fluent/bundle": "^0.19.1",
+    "@fluent/langneg": "^0.7.0",
     "handlebars": "^4.7.8",
     "html-minifier": "^4.0.0",
     "marked": "^16.4.1"

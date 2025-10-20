@@ -1,6 +1,6 @@
 import path from 'node:path';
 import puppeteer from 'puppeteer';
-import { render } from '../index.js';
+import { render } from '../src/index.js';
 import resume from '../test/fixture.resume.json' with { type: 'json' };
 
 const html = await render(resume);
