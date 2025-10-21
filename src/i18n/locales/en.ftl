@@ -2,8 +2,8 @@ title =
   {$name} - CV
 
 # Description of the image associated with the CV. Expected to be the user's
-# face, profile picture, or avatar. You can treat this use of the word avatar as
-# equivalent to a avatar or profile picture of a social media website.
+# face, profile picture, or avatar. You can treat this as equivalent to the
+# avatar or profile picture of a social media profile.
 avatar-description =
   Avatar of {$name}.
 
