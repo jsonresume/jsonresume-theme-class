@@ -65,7 +65,7 @@ references =
 # For example:
 #
 # * English → Oct 2021
-# * Bosnian → Oct 2021
+# * Bosnian → okt 2021.
 # * Dutch → okt 2021
 # * French → oct. 2021
 # * German → Okt. 2021
