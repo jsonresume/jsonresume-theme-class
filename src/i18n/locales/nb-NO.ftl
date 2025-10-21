@@ -1,0 +1,15 @@
+title = { $name } - CV
+curriculum-vitae = CV
+contact = Kontakt
+website = Nettside
+email = E-post
+phone = Telefon
+about = Om
+work-experience = Arbeidserfaring
+volunteer = Frivillig
+projects = Prosjekter
+education = Utdanning
+skills = Ferdigheter
+languages = Språk
+interests = Interesser
+references = Referanser
