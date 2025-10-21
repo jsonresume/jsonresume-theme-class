@@ -195,7 +195,7 @@ export async function render(resume) {
 
   Handlebars.registerHelper('date', /** @param {string} body */(body) => {
     if (!body) {
-      return 'Present'
+      return messages.t('present');
     }
 
     const date = new Date(body);
