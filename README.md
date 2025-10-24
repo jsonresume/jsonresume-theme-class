@@ -56,7 +56,7 @@ Includes a dark mode, and uses the [`prefers-color-scheme`](https://developer.mo
 
 ### Optimized
 
-This theme makes no external connections, doesn't embed scripts, and is lightweight by design. Both HTML and PDF exports will be minimal.
+This theme makes no external connections, doesn't embed scripts, and is lightweight by design. Both HTML and PDF exports are minimal.
 
 ## Preview
 
