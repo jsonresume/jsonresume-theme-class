@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "meta": {
-    "language": "bs"
+    "language": "en"
   },
   "basics": {
     "name": "Seth Falco",
