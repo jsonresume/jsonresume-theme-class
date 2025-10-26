@@ -5,6 +5,7 @@
   },
   "basics": {
     "name": "Seth Falco",
+    "image": "./test/favicon.png",
     "label": "Open Sourcerer 🧙‍♂️",
     "email": "seth@example.org",
     "phone": "+00 0694201337",

@@ -207,6 +207,9 @@ export async function render(resume) {
     return `<time datetime="${datetime}">${localeString}</time>`;
   });
 
+  /** @type {Record<string, unknown>} */
+  resume.custom = {};
+
   if (Array.isArray(resume.basics?.profiles)) {
     const { profiles } = resume.basics;
     const xTwitter = profiles.find((profile) => {
@@ -218,7 +221,7 @@ export async function render(resume) {
       let { username, url } = xTwitter;
 
       if (!username && url) {
-        const match = url.match(/https?:\/\/.+?\/(\w{1,15})/);
+        const match = url.match(/^https?:\/\/.+?\/(\w{1,15})/);
 
         if (match.length == 2) {
           username = match[1];
@@ -229,9 +232,15 @@ export async function render(resume) {
         username = `@${username}`;
       }
 
-      resume.custom = {
-        xTwitterHandle: username
-      }
+      resume.custom.xTwitterHandle = username;
+    }
+  }
+
+  if (resume.basics?.image) {
+    const { image } = resume.basics;
+
+    if (image.match(/^https?:\/\//)) {
+      resume.custom.ogImage = image;
     }
   }
 
