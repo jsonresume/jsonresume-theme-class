@@ -23,10 +23,13 @@
   {{/if}}
 
   {{#if resume.basics.image}}
-  <meta property="og:image" content="{{resume.basics.image}}">
-  <link rel="icon" href="{{resume.basics.image}}">
+  <link href="{{resume.basics.image}}" rel="icon">
+  {{/if}}
+  {{#if resume.custom.ogImage}}
+  <meta property="og:image" content="{{resume.custom.ogImage}}">
   {{#if resume.basics.name}}
-  <meta property="og:image:alt" content="{{i18n "avatar-description" "name" resume.basics.name}}">
+  <meta property="og:image:alt" content="{{i18n " avatar-description" "name"
+    resume.basics.name}}">
   {{/if}}
   {{/if}}
 
