@@ -46,6 +46,10 @@ You can use inline Markdown in the following properties to make text bold, itali
 - `summary`
 - `highlights`
 
+### Localized
+
+Using the same `meta.language` property referred to in [Accessibility](#accessibility), you can configure the language of the template too. For example, if you write your résumé in Dutch, the output will have Dutch headings.
+
 ### Open Graph Protocol
 
 Populates the `head` of the HTML document with [Open Graph](https://ogp.me/) tags. This enables social media platforms and instant messengers to create embeds when your résumé is shared.
