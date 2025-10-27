@@ -13,3 +13,6 @@ skills = Ferdigheter
 languages = Språk
 interests = Interesser
 references = Referanser
+avatar-description = Profil av
+dissertation = Avhandling: { $text }
+present = nåtid
