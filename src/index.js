@@ -56,7 +56,7 @@ const minifyOptions = {
 };
 
 Handlebars.registerHelper('markdown', /** @param {string} body */(body) => {
-  return marked.parse(body);
+  return marked.parseInline(body);
 });
 
 Handlebars.registerHelper('link', /** @param {string} body */(body) => {
