@@ -1,0 +1,51 @@
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: corepack enable
+      - uses: actions/setup-node@v6
+        with: &setup-node-config
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - run: yarn install
+      - run: yarn run lint
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: corepack enable
+      - uses: actions/setup-node@v6
+        with: *setup-node-config
+      - run: yarn install
+      - run: yarn run typecheck
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      # https://github.com/pa11y/pa11y/blob/2055ee510163d871e874f6ea0bfe895f84bbac4a/.github/workflows/tests.yml#L37
+      - run: echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
+      - uses: actions/checkout@v6
+      - run: corepack enable
+      - uses: actions/setup-node@v6
+        with: *setup-node-config
+      - run: yarn install
+      - run: yarn run build:html
+      - run: yarn run a11y:ci
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: corepack enable
+      - uses: actions/setup-node@v6
+        with: *setup-node-config
+      - run: yarn install
+      - run: npx resume export --theme . --resume ./test/fixture.resume.json /tmp/resume.html
+      - run: npx resume export --theme . --resume ./test/fixture.resume.json /tmp/resume.pdf
