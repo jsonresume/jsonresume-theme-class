@@ -2,9 +2,10 @@ body {
   --fg-color: black;
   --bg-color: #fff;
   --header-h1-fg-color: #fff;
-  --header-h2-fg-color: #f3f3f3;
-  --header-bg-color: #1866c3;
-  --link-color: #3061a5;
+  --header-h2-fg-color: #f2f2f2;
+  --header-bg-color: #13509b;
+  --note-color: #595959;
+  --link-color: #2c5999;
   --separator-color: #e2e2e2;
 
   margin: 0;
@@ -21,13 +22,15 @@ body {
     --header-h1-fg-color: #ddd;
     --header-h2-fg-color: #eee;
     --header-bg-color: #1b1b1b;
-    --link-color: #70a1e5;
-    --separator-color: #939393
+    --note-color: #b8b8b8;
+    --link-color: #96baec;
+    --separator-color: #939393;
   }
 }
 
 em {
-  color: #999;
+  color: var(--note-color);
+  font-size: 14px;
 }
 
 a {
