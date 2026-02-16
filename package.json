@@ -31,7 +31,6 @@
     "format": "eslint --fix .",
     "typecheck": "tsc",
     "a11y": "node ./pa11y.js",
-    "a11y:ci": "start-server-and-test 'serve . -l 8080' 'http://localhost:8080/resume.html' 'yarn run a11y'",
     "generate-preview": "node scripts/generate-preview.js",
     "build:pdf": "resume export --theme . --resume ./test/fixture.resume.json resume.pdf",
     "build:html": "resume export --theme . --resume ./test/fixture.resume.json resume.html"
@@ -56,8 +55,6 @@
     "pa11y": "^9.1.0",
     "puppeteer": "^18.2.1",
     "resume-cli": "^3.1.2",
-    "serve": "^14.2.5",
-    "start-server-and-test": "^2.1.3",
     "typescript": "^5.9.3"
   }
 }
