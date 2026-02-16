@@ -1,3 +1,4 @@
+import path from 'node:path';
 import { styleText } from 'node:util';
 import pa11y from 'pa11y';
 import puppeteer from 'puppeteer';
@@ -7,22 +8,19 @@ import puppeteer from 'puppeteer';
  *
  * @typedef {object} TestCase
  * @property {string} name
- * @property {string} url
  * @property {ColorScheme} colorScheme
  */
 
-const PAGE_URL = 'http://localhost:8080/resume.html';
+const PAGE_URL = path.join(import.meta.dirname, 'resume.html');
 
 /** @type {TestCase[]} */
 const TEST_CASES = [
   {
     name: 'Light Mode (default)',
-    url: PAGE_URL,
     colorScheme: 'light'
   },
   {
     name: 'Dark Mode',
-    url: PAGE_URL,
     colorScheme: 'dark'
   },
 ];
@@ -38,7 +36,7 @@ const pa11yRunner = async (browser, testCase) => {
     { name: 'prefers-color-scheme', value: testCase.colorScheme }
   ]);
 
-  const results = await pa11y(testCase.url, {
+  const results = await pa11y(PAGE_URL, {
     standard: 'WCAG2AAA',
     browser,
     page,

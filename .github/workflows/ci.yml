@@ -38,7 +38,7 @@ jobs:
         with: *setup-node-config
       - run: yarn install
       - run: yarn run build:html
-      - run: yarn run a11y:ci
+      - run: yarn run a11y
   build:
     runs-on: ubuntu-latest
     steps:
