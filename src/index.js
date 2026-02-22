@@ -75,7 +75,6 @@ Handlebars.registerHelper('link', /** @param {string} body */(body) => {
  * @param {any} resume
  * @returns {boolean}
  *   If the JSON Resume was modified. (i.e. was using outdated property names)
- *
  * @see https://github.com/jsonresume/resume-schema/releases/tag/v0.0.17
  * @see https://github.com/jsonresume/resume-schema/releases/tag/v0.0.12
  */
