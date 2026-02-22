@@ -5,7 +5,6 @@ import puppeteer from 'puppeteer';
 
 /**
  * @typedef {'light'|'dark'} ColorScheme
- *
  * @typedef {object} TestCase
  * @property {string} name
  * @property {ColorScheme} colorScheme
