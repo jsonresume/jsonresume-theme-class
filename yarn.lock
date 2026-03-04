@@ -256,7 +256,7 @@ __metadata:
   dependencies:
     "@fluent/bundle": "npm:^0.19.1"
     "@fluent/langneg": "npm:^0.7.0"
-    "@sethfalco/eslint-config": "npm:^1.1.0"
+    "@sethfalco/eslint-config": "npm:^1.2.1"
     "@types/html-minifier": "npm:^4.0.5"
     "@types/node": "npm:^24.8.1"
     eslint: "npm:^9.38.0"
@@ -330,9 +330,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sethfalco/eslint-config@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@sethfalco/eslint-config@npm:1.1.0::__archiveUrl=https%3A%2F%2Fgitlab.com%2Fapi%2Fv4%2Fprojects%2F79700456%2Fpackages%2Fnpm%2F%40sethfalco%2Feslint-config%2F-%2F%40sethfalco%2Feslint-config-1.1.0.tgz"
+"@sethfalco/eslint-config@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@sethfalco/eslint-config@npm:1.2.1"
   dependencies:
     "@eslint/js": "npm:^9.39.3"
     "@stylistic/eslint-plugin": "npm:^5.9.0"
@@ -341,7 +341,7 @@ __metadata:
     globals: "npm:^14.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10c0/2f9f3a355cb5368c21cab4b91880cfb9a581612bf3f760f22d6b7c66088800f182a0ee22eecdd3e27f3ca60c03c9516dcca9fed5015109fb93870684c1fabcfd
+  checksum: 10c0/8c0260e42b2b834e1c5acaf97303cbf55fd85dd37e292e28c0bf17e9d9988c42b27345eaa2b425bb02e7f6b50eb1e949826f1feca34040b6c4e36eef01552f86
   languageName: node
   linkType: hard
 
