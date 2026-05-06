@@ -85,13 +85,6 @@ header h2 {
   margin-right: 2em;
 }
 
-.project_entity,
-.project_date,
-.project_website {
-  margin-bottom: 10px;
-  width: 30%;
-}
-
 .website,
 .email,
 .phone,
@@ -106,12 +99,12 @@ header h2 {
   margin-top: .5em;
 }
 
-.work_date,
+.date,
 .work_position,
 .work_website,
 .institution,
-.study_date,
-.qualification {
+.qualification,
+.project_entity {
   margin-bottom: 10px;
   width: 30%;
 }

@@ -1,0 +1,34 @@
+<div class="item">
+  {{#if name}}
+  <h3>
+    {{name}}
+  </h3>
+  {{/if}}
+
+  <div class="split">
+    {{#if position}}
+    <div class="work_position">
+      {{position}}
+    </div>
+    {{/if}}
+
+    {{> date isEndDateRequired=isEndDateRequired}}
+
+    {{#if url}}
+    <div class="work_website">
+      {{{link url}}}
+    </div>
+    {{/if}}
+  </div>
+
+  {{#if summary}}
+  <p>{{{markdown summary}}}</p>
+  {{/if}}
+  {{#if highlights.length}}
+  <ul>
+    {{#each highlights}}
+    <li>{{{markdown .}}}</li>
+    {{/each}}
+  </ul>
+  {{/if}}
+</div>

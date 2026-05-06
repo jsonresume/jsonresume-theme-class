@@ -1,8 +1,11 @@
 import fs from 'node:fs/promises';
+import path from 'node:path';
 import Handlebars from 'handlebars';
 import { minify } from 'html-minifier';
 import { marked } from 'marked';
 import { Messages } from './i18n/messages.js';
+
+const PARTIALS_DIR = path.join(import.meta.dirname, '_partials');
 
 /** @type {Intl.DateTimeFormatOptions} */
 const LONG_DATE_FORMAT = { month: 'short', year: 'numeric' };
@@ -63,6 +66,10 @@ Handlebars.registerHelper('link', /** @param {string} body */(body) => {
   const parsed = new URL(body);
   const host = (parsed.host.startsWith('www.')) ? parsed.host.substring(4) : parsed.host;
   return `<a href="${body}">${host}</a>`;
+});
+
+Handlebars.registerHelper('or', (/** @type {unknown} */ a, /** @type {unknown} */ b) => {
+  return a || b;
 });
 
 /**
@@ -205,6 +212,17 @@ export async function render(resume) {
 
     return `<time datetime="${datetime}">${localeString}</time>`;
   });
+
+  for (const p of await fs.readdir(PARTIALS_DIR)) {
+    if (!p.endsWith('.handlebars')) {
+      continue;
+    }
+
+    Handlebars.registerPartial(
+      path.basename(p, '.handlebars'),
+      await fs.readFile(path.join(PARTIALS_DIR, p), 'utf-8')
+    );
+  }
 
   /** @type {Record<string, unknown>} */
   resume.custom = {};
