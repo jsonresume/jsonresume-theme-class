@@ -1,0 +1,8 @@
+<div class="date">
+  {{#if startDate}}
+  {{{date startDate}}}
+  {{#if (or endDate isEndDateRequired)}}
+  - {{{date endDate}}}
+  {{/if}}
+  {{/if}}
+</div>

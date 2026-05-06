@@ -122,46 +122,7 @@
     <section id="work">
       <h2>{{i18n "work-experience"}}</h2>
       {{#each resume.work}}
-      <div class="item">
-        {{#if name}}
-        <h3 class="work_name">
-          {{name}}
-        </h3>
-        {{/if}}
-
-        <div class="split">
-          {{#if position}}
-          <div class="work_position">
-            {{position}}
-          </div>
-          {{/if}}
-
-          <div class="work_date">
-            {{#if startDate}}
-            {{{date startDate}}} - {{{date endDate}}}
-            {{/if}}
-          </div>
-
-          {{#if url}}
-          <div class="work_website">
-            {{{link url}}}
-          </div>
-          {{/if}}
-        </div>
-
-        {{#if summary}}
-        <div class="summary">
-          <p>{{{markdown summary}}}</p>
-        </div>
-        {{/if}}
-        {{#if highlights.length}}
-        <ul class="highlights">
-          {{#each highlights}}
-          <li>{{{markdown .}}}</li>
-          {{/each}}
-        </ul>
-        {{/if}}
-      </div>
+      {{> tenure isEndDateRequired=true}}
       {{/each}}
     </section>
     {{/if}}
@@ -170,51 +131,7 @@
     <section id="volunteer">
       <h2>{{i18n "volunteer"}}</h2>
       {{#each resume.volunteer}}
-      <div class="item">
-        {{#if organization}}
-        <h3 class="company">
-          {{organization}}
-        </h3>
-        {{/if}}
-
-        <div class="split">
-          {{#if position}}
-          <div class="work_position">
-            {{position}}
-          </div>
-          {{/if}}
-
-          <div class="work_date">
-            {{#if startDate}}
-            <span class="startDate">
-              {{{date startDate}}}
-            </span>
-            <span class="endDate">
-              - {{{date endDate}}}
-            </span>
-            {{/if}}
-          </div>
-
-          {{#if url}}
-          <div class="work_website">
-            {{{link url}}}
-          </div>
-          {{/if}}
-        </div>
-
-        {{#if summary}}
-        <div class="summary">
-          <p>{{{markdown summary}}}</p>
-        </div>
-        {{/if}}
-        {{#if highlights.length}}
-        <ul class="highlights">
-          {{#each highlights}}
-          <li>{{{markdown .}}}</li>
-          {{/each}}
-        </ul>
-        {{/if}}
-      </div>
+      {{> tenure name=organization isEndDateRequired=true}}
       {{/each}}
     </section>
     {{/if}}
@@ -241,15 +158,7 @@
             {{entity}}
           </div>
           {{/if}}
-          <div class="project_date">
-            {{#if startDate}}
-            {{#if endDate}}
-            {{{date startDate}}} - {{{date endDate}}}
-            {{else}}
-            {{{date startDate}}}
-            {{/if}}
-            {{/if}}
-          </div>
+          {{> date isEndDateRequired=false}}
         </div>
 
         {{#if description}}
@@ -282,16 +191,7 @@
           </div>
           {{/if}}
 
-          <div class="study_date">
-            {{#if startDate}}
-            <span class="startDate">
-              {{{date startDate}}}
-            </span>
-            <span class="endDate">
-              - {{{date endDate}}}
-            </span>
-            {{/if}}
-          </div>
+          {{> date isEndDateRequired=true}}
 
           {{#if url}}
           <div class="work_website">
@@ -335,12 +235,10 @@
         </div>
         {{/if}}
         {{#if level}}
-        <div class="level">
-          <em>{{level}}</em>
-        </div>
+        <em>{{level}}</em>
         {{/if}}
         {{#if keywords.length}}
-        <ul class="keywords">
+        <ul>
           {{#each keywords}}
           <li>{{.}}</li>
           {{/each}}
@@ -397,7 +295,7 @@
       {{#each resume.references}}
       <div class="item">
         {{#if reference}}
-        <blockquote class="reference">
+        <blockquote>
           {{reference}}
         </blockquote>
         {{/if}}
