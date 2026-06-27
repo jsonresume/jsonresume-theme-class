@@ -20,9 +20,9 @@
         "url": "https://github.com/SethFalco"
       },
       {
-        "network": "LinkedIn",
-        "username": "sethfalco",
-        "url": "https://www.linkedin.com/in/sethfalco/"
+        "network": "Fediverse",
+        "username": "@sethi@fosstodon.org",
+        "url": "https://fosstodon.org/@sethi"
       }
     ]
   },
@@ -59,7 +59,7 @@
     {
       "name": "JSON Resume Class Theme",
       "description": "Suspendisse at nulla vitae ligula interdum pretium. Donec.",
-      "url": "https://github.com/jsonresume/jsonresume-theme-class/",
+      "url": "https://github.com/jsonresume/jsonresume-theme-class",
       "entity": "JSON Resume",
       "startDate": "2022-07-17",
       "highlights": [
@@ -73,7 +73,8 @@
       "institution": "freeCodeCamp",
       "url": "https://www.freecodecamp.org",
       "area": "Information Technology",
-      "studyType": "Community-Study"
+      "studyType": "Community-Study",
+      "startDate": "2021-01"
     }
   ],
   "certificates": [
