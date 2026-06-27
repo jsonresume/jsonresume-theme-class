@@ -12,6 +12,12 @@ await page.setViewport({
   height: 1054,
 });
 await page.setContent(html);
+await page.emulateMediaFeatures([
+  {
+    name: 'prefers-color-scheme',
+    value: 'light',
+  },
+]);
 await page.screenshot({
   path: path.join('assets', 'preview-light.png'),
 });
