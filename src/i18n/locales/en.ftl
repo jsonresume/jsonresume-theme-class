@@ -1,11 +1,11 @@
 title =
-  {$name} - CV
+  { $name } - CV
 
 # Description of the image associated with the CV. Expected to be the user's
 # face, profile picture, or avatar. You can treat this as equivalent to the
 # avatar or profile picture of a social media profile.
 avatar-description =
-  Avatar of {$name}.
+  Avatar of { $name }.
 
 curriculum-vitae =
   CV
@@ -42,7 +42,7 @@ education =
 # Can be treated like the word "thesis", or what is usually the last piece of
 # work required to complete a degree.
 dissertation =
-  Dissertation: {$text}
+  Dissertation: { $text }
 
 skills =
   Skills
@@ -82,9 +82,9 @@ present =
 # Used in work experience and volunteering for when one works at a company.
 # Example: Open Sourcerer 🧙‍♂️ "at JSON Resume"
 at-tenure =
-  at {$name}
+  at { $name }
 
 # Used in project section in a similar way as at-tenure.
 # Example: JSON Resume Class Theme "for JSON Resume"
 for-org =
-  for {$name}
+  for { $name }
