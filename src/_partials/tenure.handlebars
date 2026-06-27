@@ -1,24 +1,17 @@
 <div class="item">
-  {{#if name}}
-  <h3>
-    {{name}}
-  </h3>
-  {{/if}}
-
-  <div class="split">
-    {{#if position}}
-    <div class="work_position">
-      {{position}}
-    </div>
-    {{/if}}
-
+  <div class="item-header">
+    <h3>
+      <span>{{position}}</span>
+      {{#if name}}
+      <span class="item-subheading">
+        {{i18n i18n-key "name" name}}
+        {{#if url}}
+        • {{{link url}}}
+        {{/if}}
+      </span>
+      {{/if}}
+    </h3>
     {{> date isEndDateRequired=isEndDateRequired}}
-
-    {{#if url}}
-    <div class="work_website">
-      {{{link url}}}
-    </div>
-    {{/if}}
   </div>
 
   {{#if summary}}

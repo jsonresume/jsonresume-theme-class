@@ -122,7 +122,7 @@
     <section id="work">
       <h2>{{i18n "work-experience"}}</h2>
       {{#each resume.work}}
-      {{> tenure isEndDateRequired=true}}
+      {{> tenure isEndDateRequired=true i18n-key="at-tenure"}}
       {{/each}}
     </section>
     {{/if}}
@@ -131,7 +131,7 @@
     <section id="volunteer">
       <h2>{{i18n "volunteer"}}</h2>
       {{#each resume.volunteer}}
-      {{> tenure name=organization isEndDateRequired=true}}
+      {{> tenure name=organization isEndDateRequired=true i18n-key="at-tenure"}}
       {{/each}}
     </section>
     {{/if}}
@@ -140,40 +140,7 @@
     <section id="projects">
       <h2>{{i18n "projects"}}</h2>
       {{#each resume.projects}}
-      <div class="item">
-        {{#if name}}
-        <h3 class="project_name">
-          {{#if url}}
-          <a href="{{url}}" target="_blank"
-            rel="noopener noreferrer">{{name}}</a>
-          {{else}}
-          {{name}}
-          {{/if}}
-        </h3>
-        {{/if}}
-
-        <div class="split">
-          {{#if entity}}
-          <div class="project_entity">
-            {{entity}}
-          </div>
-          {{/if}}
-          {{> date isEndDateRequired=false}}
-        </div>
-
-        {{#if description}}
-        <div class="summary">
-          <p>{{{markdown description}}}</p>
-        </div>
-        {{/if}}
-        {{#if highlights.length}}
-        <ul class="highlights">
-          {{#each highlights}}
-          <li>{{{markdown .}}}</li>
-          {{/each}}
-        </ul>
-        {{/if}}
-      </div>
+      {{> tenure name=entity position=name summary=description i18n-key="for-org"}}
       {{/each}}
     </section>
     {{/if}}

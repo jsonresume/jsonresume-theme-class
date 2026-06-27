@@ -78,3 +78,13 @@ references =
 # deciding how to capitalize the translation of `Present`.
 present =
   Present
+
+# Used in work experience and volunteering for when one works at a company.
+# Example: Open Sourcerer 🧙‍♂️ "at JSON Resume"
+at-tenure =
+  at {$name}
+
+# Used in project section in a similar way as at-tenure.
+# Example: JSON Resume Class Theme "for JSON Resume"
+for-org =
+  for {$name}
