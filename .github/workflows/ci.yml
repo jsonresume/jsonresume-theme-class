@@ -29,6 +29,8 @@ jobs:
       - run: yarn run typecheck
   a11y:
     runs-on: ubuntu-latest
+    env:
+      PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
     steps:
       # https://github.com/pa11y/pa11y/blob/2055ee510163d871e874f6ea0bfe895f84bbac4a/.github/workflows/tests.yml#L37
       - run: echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
@@ -36,7 +38,11 @@ jobs:
       - run: corepack enable
       - uses: actions/setup-node@v6
         with: *setup-node-config
+<<<<<<< Updated upstream
       - run: yarn install
+=======
+      - run: yarn install --immutable
+>>>>>>> Stashed changes
       - run: yarn run build:html
       - run: yarn run a11y
   build:
