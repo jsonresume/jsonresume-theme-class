@@ -65,7 +65,8 @@ Handlebars.registerHelper('markdown', /** @param {string} body */(body) => {
 Handlebars.registerHelper('link', /** @param {string} body */(body) => {
   const parsed = new URL(body);
   const host = (parsed.host.startsWith('www.')) ? parsed.host.substring(4) : parsed.host;
-  return `<a href="${body}">${host}</a>`;
+  const result = parsed.pathname !== '/' ? host + parsed.pathname : host;
+  return `<a href="${body}" target="_blank">${result}</a>`;
 });
 
 Handlebars.registerHelper('or', (/** @type {unknown} */ a, /** @type {unknown} */ b) => {

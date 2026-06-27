@@ -30,7 +30,7 @@ body {
 
 em {
   color: var(--note-color);
-  font-size: 14px;
+  font-size: .9rem;
 }
 
 a {
@@ -81,6 +81,10 @@ header h2 {
   flex-wrap: wrap;
 }
 
+.split > * {
+  width: 30%;
+}
+
 .split strong {
   margin-right: 2em;
 }
@@ -99,14 +103,10 @@ header h2 {
   margin-top: .5em;
 }
 
-.date,
-.work_position,
 .work_website,
 .institution,
-.qualification,
-.project_entity {
+.qualification {
   margin-bottom: 10px;
-  width: 30%;
 }
 
 .courses,
@@ -143,6 +143,23 @@ header h2 {
 #languages .item,
 #interests .item {
   margin: 0 0 25px 0;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-subheading {
+  font-size: .9rem;
+  font-style: italic;
+  font-weight: normal;
+  margin-top: .2rem;
+  display: block;
+}
+
+.item h3 {
+  margin: 0;
 }
 
 @page {
