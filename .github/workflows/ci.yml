@@ -38,11 +38,7 @@ jobs:
       - run: corepack enable
       - uses: actions/setup-node@v6
         with: *setup-node-config
-<<<<<<< Updated upstream
-      - run: yarn install
-=======
       - run: yarn install --immutable
->>>>>>> Stashed changes
       - run: yarn run build:html
       - run: yarn run a11y
   build:

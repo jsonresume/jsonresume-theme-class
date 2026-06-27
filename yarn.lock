@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 10
   cacheKey: 10c0
 
 "@babel/code-frame@npm:^7.0.0":
@@ -264,7 +264,7 @@ __metadata:
     html-minifier: "npm:^4.0.0"
     marked: "npm:^16.4.1"
     pa11y: "npm:^9.1.1"
-    puppeteer: "npm:^18.2.1"
+    puppeteer: "npm:^24.43.1"
     resume-cli: "npm:^3.1.2"
     typescript: "npm:^5.9.3"
   languageName: unknown
@@ -5684,7 +5684,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^24.37.5":
+"puppeteer@npm:^24.37.5, puppeteer@npm:^24.43.1":
   version: 24.43.1
   resolution: "puppeteer@npm:24.43.1"
   dependencies:
