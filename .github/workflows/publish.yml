@@ -17,5 +17,5 @@ jobs:
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org
-      - run: yarn install
+      - run: yarn install --immutable
       - run: yarn npm publish --access public
