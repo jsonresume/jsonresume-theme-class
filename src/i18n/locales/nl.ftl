@@ -16,5 +16,5 @@ languages = Talen
 interests = Interesses
 references = Referenties
 present = heden
-at-tenure = bij {$name}
-for-org = voor {$name}
+at-tenure = bij { $name }
+for-org = voor { $name }
